@@ -1,0 +1,798 @@
+<!DOCTYPE html><html lang="en-MY" dir="ltr"><head><title>Checkout - Quraany</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, user-scalable=0"/><meta name="referrer" content="origin"/><link rel="preconnect" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/" crossorigin/><link rel="dns-prefetch" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/" crossorigin/><link rel="preconnect" href="https://checkout.shopifycs.com" crossorigin/><link rel="dns-prefetch" href="https://checkout.shopifycs.com" crossorigin/></head><body class="Loading"><script>
+    try {
+    Function('const [result] = ((abc = 1) => [Promise.resolve(abc)])();');
+  } catch (err) {
+    document.documentElement.innerHTML = "<div class=\"error-container\"><style>* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nhtml {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  background: #F1F1F1;\n  font-size: 62.5%;\n  color: #303030;\n  min-height: 100%;\n}\n\nbody {\n  padding: 0;\n  margin: 0;\n  line-height: 2.7rem;\n}\n\nh1 {\n  font-size: 1.8rem;\n  font-weight: 400;\n  margin: 0 0 1.4rem 0;\n}\n\np {\n  font-size: 1.5rem;\n  margin: 0;\n}\n\n.error-container {\n  padding: 4rem 3.5rem;\n}\n\n@media all and (min-width:500px) {\n  .error-container {\n    padding: 7.5rem 10.5rem;\n    align-items: center;\n  }\n}</style><div><h1>It looks like your browser version isn't supported.</h1><p>Please update your browser to access the checkout and complete your purchase.</p></div></div>";
+  }</script><style>
+    
+    :root {
+      
+    
+    --x-skeleton-color-global-accent: hsl(204, 77%, 39%);
+    --x-skeleton-color-global-background: hsl(0, 0%, 100%);
+    --x-skeleton-color-global-backgroundSubdued: hsl(0, 0%, 96%);
+    --x-skeleton-color-global-border: hsl(0, 0%, 87%);
+    --x-skeleton-color-global-text: hsl(0, 0%, 0%);
+    --x-skeleton-color-global-textContrast: hsl(0, 0%, 100%);
+    --x-skeleton-color-global-textSubdued: hsl(0, 0%, 44%);
+    --x-skeleton-color-global-textSubdued200: hsl(0, 0%, 90%);
+
+    --x-skeleton-color-schemes-scheme2-base-background: hsl(0, 0%, 96%);
+    --x-skeleton-color-schemes-scheme2-base-backgroundSubdued: hsl(0, 0%, 93%);
+    --x-skeleton-color-schemes-scheme2-base-border: hsl(0, 0%, 84%);
+    --x-skeleton-color-schemes-scheme2-base-text: hsl(0, 0%, 0%);
+    --x-skeleton-color-schemes-scheme2-base-textContrast: hsl(0, 0%, 96%);
+    --x-skeleton-color-schemes-scheme2-base-textSubdued: hsl(0, 0%, 40%);
+    --x-skeleton-color-schemes-scheme2-base-textSubdued200: hsl(0, 0%, 80%);
+  
+    --x-skeleton-color-global-accent: #384a59;
+    
+
+
+
+  
+
+      --x-skeleton-typography-line-small: 1.2;
+      --x-skeleton-typography-line-base: 1.5;
+      --x-skeleton-line-quantity-size: 2.1rem;
+
+      --x-skeleton-typography-size-small: 1.2rem;
+      --x-skeleton-typography-size-default: 1.4rem;
+      --x-skeleton-typography-size-medium: 1.6rem;
+      --x-skeleton-typography-size-large: 1.9rem;
+      --x-skeleton-typography-size-extra-large: 2.1rem;
+      --x-skeleton-typography-size-extra-extra-large: 2.4rem;
+
+      --x-skeleton-typography-primary-weight-bold: 400;
+      --x-skeleton-typography-primary-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+      --x-skeleton-typography-secondary-weight-bold: 600;
+      --x-skeleton-typography-secondary-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+      --x-skeleton-spacing-none: 0;
+      --x-skeleton-spacing-small-100: 1.1rem;
+      --x-skeleton-spacing-small-200: 0.9rem;
+      --x-skeleton-spacing-small-300: 0.7rem;
+      --x-skeleton-spacing-small-400: 0.5rem;
+      --x-skeleton-spacing-small-500: 0.3rem;
+      --x-skeleton-spacing-base: 1.4rem;
+      --x-skeleton-spacing-large-100: 1.7rem;
+      --x-skeleton-spacing-large-200: 2.1rem;
+      --x-skeleton-spacing-large-300: 2.6rem;
+      --x-skeleton-spacing-large-400: 3.2rem;
+      --x-skeleton-spacing-large-500: 3.8rem;
+
+      --x-skeleton-border-radius-none: 0;
+      --x-skeleton-border-radius-base: 5px;
+      --x-skeleton-border-radius-small: 2px;
+      --x-skeleton-border-radius-large: 10px;
+    }
+
+    
+
+    @keyframes SkeletonPulse {
+      50% {
+        opacity: 1;
+      }
+      75% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    *,
+    :after,
+    :before {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      width: 100%;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      font-size: 62.5%;
+      font-family: var(--x-skeleton-typography-primary-fonts);
+      line-height: var(--x-skeleton-typography-line-base);
+    }
+
+    body {
+      -webkit-font-smoothing: subpixel-antialiased;
+      overflow-wrap: break-word;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    body.Loading {
+      position: fixed;
+    }
+
+    /* TODO: need to take it out of the accessibility tree, too? */
+    body.Loading > .LoadingShell {
+      opacity: 1;
+    }
+  
+    
+    .BlockStack {
+      display: grid;
+    }
+
+    .BlockStack--spacing-small500 {
+      gap: var(--x-skeleton-spacing-small-500);
+    }
+    .BlockStack--spacing-small300 {
+      gap: var(--x-skeleton-spacing-small-300);
+    }
+    .BlockStack--spacing-small100 {
+      gap: var(--x-skeleton-spacing-small-100);
+    }
+    .BlockStack--spacing-base {
+      gap: var(--x-skeleton-spacing-base);
+    }
+    .BlockStack--spacing-large100 {
+      gap: var(--x-skeleton-spacing-large-100);
+    }
+    .BlockStack--spacing-large200 {
+      gap: var(--x-skeleton-spacing-large-200);
+    }
+    .BlockStack--min-inline-size-full {
+      flex: 1;
+    }
+    .BlockStack--inline-alignment-center {
+      justify-items: center;
+    }
+    .BlockStack--inline-alignment-end {
+      justify-items: end;
+    }
+
+    .LoadingHeaderHeading {
+      margin: 0;
+      font-size: var(--x-skeleton-typography-size-extra-large);
+      font-weight: var(--x-skeleton-typography-secondary-weight-bold);
+      font-family: var(--x-skeleton-typography-secondary-fonts);
+      line-height: var(--x-skeleton-typography-line-small);
+    }
+
+    .LoadingHeaderImage {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .InlineStack {
+      display: flex;
+      min-height: 100%;
+      min-width: 100%;
+    }
+    .InlineStack--spacing-base {
+      column-gap: var(--x-skeleton-spacing-base);
+    }
+
+    .InlineStack--spacing-small100 {
+      column-gap: var(--x-skeleton-spacing-small-100);
+    }
+
+    .InlineStack--spacing-large200 {
+      column-gap: var(--x-skeleton-spacing-large-200);
+    }
+    .InlineStack--inline-alignment-spaceBetween {
+      justify-content: space-between;
+    }
+    .InlineStack--block-alignment-start {
+      align-items: start;
+    }
+    .InlineStack--block-alignment-center {
+      align-items: center;
+    }
+
+    .Divider {
+      width: 100%;
+      height: 1px;
+      background-color: var(--x-skeleton-default-color-border);
+    }
+
+    .SkeletonButton {
+      background-color: var(--x-skeleton-default-color-textSubdued200);
+      border-radius: var(--x-skeleton-border-radius-base);
+      animation: SkeletonPulse 4000ms ease infinite;
+      width: 100%;
+    }
+    .SkeletonButtonInner {
+      width: 100%;
+      height: 4.8rem;
+    }
+
+    .SkeletonImage {
+      background-color: var(--x-skeleton-default-color-textSubdued200);
+      animation: SkeletonPulse 4000ms ease infinite;
+      width: 100%;
+    }
+    .SkeletonImage--corner-radius-small {
+      border-radius: var(--x-skeleton-border-radius-small);
+    }
+    .SkeletonImage--corner-radius-base {
+      border-radius: var(--x-skeleton-border-radius-base);
+    }
+    .SkeletonImage--corner-radius-large {
+      border-radius: var(--x-skeleton-border-radius-large);
+    }
+    .SkeletonImage--corner-radius-rounded {
+      border-radius: 100%;
+    }
+
+    .SkeletonImageInner {
+      width: 100%;
+      height: 100%;
+    }
+
+    @supports (aspect-ratio: 1) {
+      .SkeletonImage {
+        aspect-ratio: 1;
+      }
+    }
+    @supports not (aspect-ratio: 1) {
+      .SkeletonImage::before {
+        content: "";
+        height: 0;
+        display: block;
+        padding-bottom: 100%;
+        padding-bottom: calc(100% / 1);
+      }
+    }
+
+    .SkeletonText {
+      background-color: var(--x-skeleton-default-color-textSubdued200);
+      border-radius: var(--x-skeleton-border-radius-base);
+      animation: SkeletonPulse 4000ms ease infinite;
+    }
+    .SkeletonTextInner {
+      display: inline-block;
+    }
+    .SkeletonTextInner--inline-size-small {
+      width: 10ch;
+    }
+    .SkeletonTextInner--inline-size-base {
+      width: 20ch;
+    }
+    .SkeletonTextInner--inline-size-large {
+      width: 30ch;
+    }
+    .SkeletonTextInner--inline-size-full {
+      width: 100%;
+    }
+
+    .Icon {
+      fill: none;
+      color: var(--x-skeleton-default-color-border);
+      stroke: currentColor;
+    }
+
+    .Icon path {
+      vector-effect: non-scaling-stroke;
+      stroke-width: 1.4px;
+    }
+
+    .LoadingShellLineItems {
+      display: grid;
+      grid-auto-flow: row;
+      align-items: stretch;
+      gap: var(--x-skeleton-spacing-base);
+    }
+
+    .LoadingShellLine {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: var(--x-skeleton-spacing-base);
+      align-items: center;
+      font-size: var(--x-type-size-base);
+    }
+
+    .LoadingShellLineImageWrapper {
+      width: 6.4rem;
+      height: 6.4rem;
+      position: relative;
+    }
+
+    .LoadingShellImageWrapper--Small {
+      width: 3.2rem;
+      height: 3.2rem;
+      position: relative;
+    }
+
+    .LoadingShellLineImage {
+      width: 6.4rem;
+      height: 6.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      object-fit: contain;
+      background: var(--x-skeleton-default-color-backgroundSubdued);
+    }
+    .LoadingShellLineImage--border-full {
+      border: 1px solid var(--x-skeleton-default-color-border);
+    }
+    .LoadingShellLineImage--corner-radius-small {
+      border-radius: var(--x-skeleton-border-radius-small);
+    }
+    .LoadingShellLineImage--corner-radius-base {
+      border-radius: var(--x-skeleton-border-radius-base);
+    }
+    .LoadingShellLineImage--corner-radius-large {
+      border-radius: var(--x-skeleton-border-radius-large);
+    }
+    .LoadingShellLineImage--corner-radius-rounded {
+      border-radius: 100%;
+    }
+
+    .LoadingShellLineImageIcon {
+      width: 3.3rem;
+      height: 3.3rem;
+    }
+
+    .LoadingShellLineQuantity {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(25%, -50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.2rem;
+      min-height: 2.2rem;
+      padding: 0 var(--x-skeleton-spacing-small-300);
+      border-radius: 1.1rem;
+      background: var(--x-skeleton-default-color-textSubdued);
+      color: var(--x-skeleton-default-color-textContrast);
+      font-size: var(--x-skeleton-typography-size-small);
+      font-weight: 500;
+    }
+
+    .LoadingShellLineQuantity--corner-radius-none {
+      border-radius: 0;
+    }
+
+    .LoadingShellLineContent {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .LoadingShellLinePrice {
+      min-height: 6.4rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .Text {
+      font-size: var(--x-skeleton-typography-size-default);
+    }
+    .Text--size-small {
+      font-size: var(--x-skeleton-typography-size-small);
+    }
+    .Text--size-large {
+      font-size: var(--x-skeleton-typography-size-large);
+    }
+    .Text--size-extraExtraLarge {
+      font-size: var(--x-skeleton-typography-size-extra-extra-large);
+    }
+    .Text--appearance-subdued {
+      color: var(--x-skeleton-default-color-textSubdued);
+    }
+
+    .SkeletonExpressCheckoutButtons {
+      display: grid;
+      gap: var(--x-skeleton-spacing-small-100);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .SkeletonExpressCheckoutButtons > *:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .SkeletonExpressCheckout {
+      margin-bottom: var(--x-skeleton-spacing-large-500);
+    }
+
+    .ExpressCheckoutDivider {
+      display: flex;
+      place-items: center;
+      height: 21px;
+      padding-top: calc(var(--x-skeleton-spacing-large-500) - 1px);
+    }
+
+    @media screen and (min-width: 1000px) {
+      .SkeletonExpressCheckoutButtons {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .SkeletonExpressCheckoutButtons > *:first-child {
+        grid-column: auto;
+      }
+
+      .SkeletonExpressCheckoutButtons {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .SkeletonExpressCheckoutButtons > *:first-child {
+        grid-column: auto;
+      }
+    }
+
+    .LoadingShellHeader--banner {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-image: var(--x-skeleton-banner-image);
+      --x-skeleton-header-shop-name-color: #fff;
+      --x-skeleton-cart-color: #fff;
+    }
+
+
+    .VisuallyHidden {
+      border-width: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      white-space: nowrap;
+    }
+
+    .FadeIn {
+      opacity: 0;
+      animation: 400ms FadeIn 150ms forwards;
+    }
+
+    @keyframes FadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+    
+    
+        .colorSchemeScheme1 {
+          --x-skeleton-default-color-background: var(--x-skeleton-color-schemes-scheme1-base-background, var(--x-skeleton-color-global-background));
+          --x-skeleton-default-color-accent: var(--x-skeleton-color-schemes-scheme1-base-accent, var(--x-skeleton-color-global-accent));
+          --x-skeleton-default-color-backgroundSubdued: var(--x-skeleton-color-schemes-scheme1-base-backgroundSubdued, var(--x-skeleton-color-global-backgroundSubdued));
+          --x-skeleton-default-color-border: var(--x-skeleton-color-schemes-scheme1-base-border, var(--x-skeleton-color-global-border));
+          --x-skeleton-default-color-text: var(--x-skeleton-color-schemes-scheme1-base-text, var(--x-skeleton-color-global-text));
+          --x-skeleton-default-color-textContrast: var(--x-skeleton-color-schemes-scheme2-base-textContrast, var(--x-skeleton-color-global-textContrast));
+          --x-skeleton-default-color-textSubdued: var(--x-skeleton-color-schemes-scheme1-base-textSubdued, var(--x-skeleton-color-global-textSubdued));
+          --x-skeleton-default-color-textSubdued200: var(--x-skeleton-color-schemes-scheme1-base-textSubdued200, var(--x-skeleton-color-global-textSubdued200));
+        }
+      
+        .colorSchemeScheme2 {
+          --x-skeleton-default-color-background: var(--x-skeleton-color-schemes-scheme2-base-background, var(--x-skeleton-color-global-background));
+          --x-skeleton-default-color-accent: var(--x-skeleton-color-schemes-scheme2-base-accent, var(--x-skeleton-color-global-accent));
+          --x-skeleton-default-color-backgroundSubdued: var(--x-skeleton-color-schemes-scheme2-base-backgroundSubdued, var(--x-skeleton-color-global-backgroundSubdued));
+          --x-skeleton-default-color-border: var(--x-skeleton-color-schemes-scheme2-base-border, var(--x-skeleton-color-global-border));
+          --x-skeleton-default-color-text: var(--x-skeleton-color-schemes-scheme2-base-text, var(--x-skeleton-color-global-text));
+          --x-skeleton-default-color-textContrast: var(--x-skeleton-color-schemes-scheme2-base-textContrast, var(--x-skeleton-color-global-textContrast));
+          --x-skeleton-default-color-textSubdued: var(--x-skeleton-color-schemes-scheme2-base-textSubdued, var(--x-skeleton-color-global-textSubdued));
+          --x-skeleton-default-color-textSubdued200: var(--x-skeleton-color-schemes-scheme2-base-textSubdued200, var(--x-skeleton-color-global-textSubdued200));
+        }
+      
+        .colorSchemeScheme3 {
+          --x-skeleton-default-color-background: var(--x-skeleton-color-schemes-scheme3-base-background, var(--x-skeleton-color-global-background));
+          --x-skeleton-default-color-accent: var(--x-skeleton-color-schemes-scheme3-base-accent, var(--x-skeleton-color-global-accent));
+          --x-skeleton-default-color-backgroundSubdued: var(--x-skeleton-color-schemes-scheme3-base-backgroundSubdued, var(--x-skeleton-color-global-backgroundSubdued));
+          --x-skeleton-default-color-border: var(--x-skeleton-color-schemes-scheme3-base-border, var(--x-skeleton-color-global-border));
+          --x-skeleton-default-color-text: var(--x-skeleton-color-schemes-scheme3-base-text, var(--x-skeleton-color-global-text));
+          --x-skeleton-default-color-textContrast: var(--x-skeleton-color-schemes-scheme2-base-textContrast, var(--x-skeleton-color-global-textContrast));
+          --x-skeleton-default-color-textSubdued: var(--x-skeleton-color-schemes-scheme3-base-textSubdued, var(--x-skeleton-color-global-textSubdued));
+          --x-skeleton-default-color-textSubdued200: var(--x-skeleton-color-schemes-scheme3-base-textSubdued200, var(--x-skeleton-color-global-textSubdued200));
+        }
+      
+        .colorSchemeScheme4 {
+          --x-skeleton-default-color-background: var(--x-skeleton-color-schemes-scheme4-base-background, var(--x-skeleton-color-global-background));
+          --x-skeleton-default-color-accent: var(--x-skeleton-color-schemes-scheme4-base-accent, var(--x-skeleton-color-global-accent));
+          --x-skeleton-default-color-backgroundSubdued: var(--x-skeleton-color-schemes-scheme4-base-backgroundSubdued, var(--x-skeleton-color-global-backgroundSubdued));
+          --x-skeleton-default-color-border: var(--x-skeleton-color-schemes-scheme4-base-border, var(--x-skeleton-color-global-border));
+          --x-skeleton-default-color-text: var(--x-skeleton-color-schemes-scheme4-base-text, var(--x-skeleton-color-global-text));
+          --x-skeleton-default-color-textContrast: var(--x-skeleton-color-schemes-scheme2-base-textContrast, var(--x-skeleton-color-global-textContrast));
+          --x-skeleton-default-color-textSubdued: var(--x-skeleton-color-schemes-scheme4-base-textSubdued, var(--x-skeleton-color-global-textSubdued));
+          --x-skeleton-default-color-textSubdued200: var(--x-skeleton-color-schemes-scheme4-base-textSubdued200, var(--x-skeleton-color-global-textSubdued200));
+        }
+      
+
+    .backgroundColorBase {
+      background-color: var(--x-skeleton-default-color-background);
+      color: var(--x-skeleton-default-color-text);
+    }
+
+    .backgroundColorSubdued {
+      background-color: var(--x-skeleton-default-color-backgroundSubdued);
+      color: var(--x-skeleton-default-color-text);
+    }
+  
+
+    
+
+
+    .LoadingShell {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100000;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+
+      min-height: 100dvh;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      grid-template-areas:
+        'header'
+        'disclosure'
+        'shell-content';
+      background-image: var(--x-skeleton-shell-background-image);
+
+      --x-skeleton-shell-inline-size: 57rem;
+      --x-skeleton-shell-background-image: var(--skeleton-config-shell-background-image);
+
+      --x-skeleton-shell-header-inline-size: var(--x-skeleton-shell-inline-size);
+
+      --x-skeleton-shell-header-padding: var(--skeleton-config-header-padding, var(--x-skeleton-spacing-large-200));
+
+      --x-skeleton-shell-header-background-image: var(--skeleton-config-header-background-image);
+
+      --x-skeleton-shell-disclosure-inline-size: var(--x-skeleton-shell-inline-size);
+      --x-skeleton-shell-disclosure-padding: var(--x-skeleton-spacing-large-100) var(--x-skeleton-spacing-large-200);
+      --x-skeleton-shell-disclosure-display: block;
+
+      --x-skeleton-shell-main-inline-size: var(--x-skeleton-shell-inline-size);
+      --x-skeleton-shell-main-justify-content: center;
+      --x-skeleton-shell-main-padding: var(--x-skeleton-spacing-large-200);
+      --x-skeleton-shell-main-border: none;
+
+      --x-skeleton-shell-order-summary-display: none;
+      --x-skeleton-shell-order-summary-background-image: var(--skeleton-config-order-summary-background-image);
+
+      @media screen and (min-width: 1000px) {
+        --x-skeleton-shell-main-inline-size: 66rem;
+        --x-skeleton-shell-order-summary-inline-size: 52rem;
+        --x-skeleton-shell-section-columns-offset: 7rem;
+
+        --x-skeleton-shell-content-display: grid;
+        --x-skeleton-shell-content-template-areas: 'main order-summary';
+
+        --x-skeleton-shell-content-template-columns: minmax(
+            min-content, calc(50% + var(--x-skeleton-shell-section-columns-offset))
+          )
+          1fr;
+
+        --x-skeleton-shell-inline-size: 118rem;
+        --x-skeleton-shell-header-padding: var(--skeleton-config-header-padding, 0);
+
+        --x-skeleton-shell-disclosure-display: none;
+
+        --x-skeleton-shell-main-justify-content: flex-end;
+        --x-skeleton-shell-main-padding: var(--x-skeleton-spacing-large-500);
+        --x-skeleton-shell-main-border: 1px solid var(--x-skeleton-default-color-border);
+
+        --x-skeleton-shell-order-summary-display: block;
+        --x-skeleton-shell-order-summary-padding: var(--x-skeleton-spacing-large-500);
+      }
+    }
+
+    @supports (width: min(0px, 100px)) {
+      /* mobile header padding is clamped at large-200 like Sections */
+      @media screen and (max-width: 999px) {
+        .LoadingShell {
+          --x-skeleton-shell-header-padding: min(
+            var(--skeleton-config-header-padding, var(--x-skeleton-spacing-large-200)),
+            var(--x-skeleton-spacing-large-200)
+          );
+        }
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      .LoadingShell.LoadingShellConfig-Header-positionStart {
+        --x-skeleton-shell-header-padding: var(--skeleton-config-header-padding,
+            calc(var(--x-skeleton-spacing-large-500) * 2) var(--x-skeleton-spacing-large-500)
+              var(--x-skeleton-spacing-large-500)
+          );
+      }
+
+      .LoadingShell.LoadingShellConfig-Header-positionStart.LoadingShell-variantOneStepCheckout {
+        --x-skeleton-shell-header-padding: var(--skeleton-config-header-padding, var(--x-skeleton-spacing-large-200) var(--x-skeleton-spacing-large-500));
+      }
+    }
+
+    .LoadingShellHeader {
+      grid-area: header;
+    }
+
+    .LoadingShellHeaderContent {
+      padding: var(--x-skeleton-shell-header-padding);
+      width: 100%;
+      max-width: var(--x-skeleton-shell-header-inline-size);
+    }
+
+    @media screen and (min-width: 1000px) {
+      .LoadingShell:not(.LoadingShellConfig-Header-positionStart) .LoadingShellHeader-positionStart {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 999px) {
+      .LoadingShellConfig-Header-positionInline .LoadingShellHeader-positionInline,
+      .LoadingShellConfig-Header-positionInlineSecondary .LoadingShellHeader-positionInlineSecondary {
+        display: none;
+      }
+
+      .LoadingShellConfig-Header-positionInlineSecondary .LoadingShellHeader-positionStart {
+        background-image: var(
+          --x-skeleton-shell-header-background-image,
+          var(--x-skeleton-shell-order-summary-background-image)
+        );
+      }
+    }
+
+    .LoadingShellHeader-positionStart {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid var(--x-skeleton-default-color-border);
+      background-image: var(--x-skeleton-shell-header-background-image);
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+
+    .LoadingShellHeader-positionStart.LoadingShellHeader-hasBackgroundImage {
+      --header-shop-name-color: #ffffff;
+      --x-skeleton-default-color-accent: #ffffff;
+    }
+
+    .LoadingShellBuyerJourneyContent {
+      width: 100%;
+      width: var(--x-skeleton-shell-buyer-journey-inline-size);
+      padding: var(--x-skeleton-shell-buyer-journey-padding);
+    }
+
+    .LoadingShellDisclosure {
+      grid-area: disclosure;
+      display: var(--x-skeleton-shell-disclosure-display);
+      border-bottom: 1px solid var(--x-skeleton-default-color-border);
+    }
+
+    .LoadingShellDisclosureButton {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .LoadingShellDisclosureButton {
+      text-align: start;
+      background: var(--x-skeleton-default-color-backgroundSubdued);
+      color: var(--x-skeleton-default-color-accent);
+      position: relative;
+      z-index: 2;
+    }
+
+    .LoadingShellConfig-Shell-hasBackgroundImage .LoadingShellDisclosureButton {
+      background: transparent;
+      color: inherit;
+    }
+
+    .LoadingShellDisclosureButtonContent {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--x-skeleton-spacing-small-200);
+      align-content: center;
+      align-items: center;
+    }
+
+    .LoadingShellDisclosureButtonContent {
+      padding: var(--x-skeleton-shell-disclosure-padding);
+      width: 100%;
+      max-width: var(--x-skeleton-shell-disclosure-inline-size);
+    }
+
+    .LoadingShellContent {
+      grid-area: shell-content;
+      display: var(--x-skeleton-shell-content-display);
+      grid-template-areas: var(--x-skeleton-shell-content-template-areas);
+      grid-template-columns: var(--x-skeleton-shell-content-template-columns);
+    }
+
+    .LoadingShellMain {
+      grid-area: main;
+      display: flex;
+      justify-content: var(--x-skeleton-shell-main-justify-content);
+      height: 100%;
+    }
+
+    .LoadingShellMain .LoadingShellMainContent {
+      height: 100%;
+      width: 100%;
+      max-width: var(--x-skeleton-shell-main-inline-size);
+      padding: var(--x-skeleton-shell-main-padding);
+      border-inline-end: var(--x-skeleton-shell-main-border);
+
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'header'
+        'buyer-journey'
+        'main-content-primary';
+    }
+
+    .LoadingShellMainContentPrimary {
+      grid-area: main-content-primary;
+    }
+
+
+    .LoadingShellMainContent .LoadingShellHeader {
+      margin-bottom: var(--x-skeleton-spacing-large-100);
+    }
+    .LoadingShellMainContent .LoadingShellBuyerJourney {
+      margin-bottom: var(--x-skeleton-spacing-large-300);
+    }
+
+    .LoadingShell-variantOneStepCheckout .LoadingShellMainContent .LoadingShellHeader {
+      margin-bottom: calc(var(--x-skeleton-spacing-large-300) * 2);
+    }
+
+    .LoadingShellOrderSummary {
+      display: var(--x-skeleton-shell-order-summary-display);
+      grid-area: order-summary;
+    }
+
+    .LoadingShellOrderSummary .LoadingShellOrderSummaryContent {
+      position: sticky;
+      padding: var(--x-skeleton-shell-order-summary-padding);
+      width: 100%;
+      max-width: var(--x-skeleton-shell-order-summary-inline-size);
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: auto;
+    }
+
+    .LoadingShellOrderSummaryContent .LoadingShellHeader {
+      margin-bottom: var(--x-skeleton-spacing-large-200);
+    }
+
+    /* Header */
+    .LoadingHeader {
+      display: flex;
+      width: 100%;
+    }
+
+    .LoadingHeader-alignmentStart {
+      justify-content: flex-start;
+    }
+
+    .LoadingHeader-alignmentCenter {
+      justify-content: center;
+    }
+
+    .LoadingHeader-alignmentEnd {
+      justify-content: flex-end;
+    }
+
+    .LoadingShell-variantOneStepCheckout .LoadingHeader-alignmentCenter .LoadingHeaderHeading {
+      display: flex;
+      justify-content: center;
+    }
+    .LoadingShell-variantOneStepCheckout .LoadingHeader-alignmentEnd .LoadingHeaderHeading {
+      display: flex;
+      justify-content: flex-end;
+    }
+  </style><div style="--skeleton-config-header-background-image:url(&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/About_1_2000x.jpg?v=1678535211&quot;);" class="LoadingShell LoadingShellConfig-Header-positionStart LoadingShell-variantOneStepCheckout colorSchemeScheme1 backgroundColorBase"><header role="banner" class="LoadingShellHeader LoadingShellHeader-containerFill LoadingShellHeader-positionStart LoadingShellHeader-hasBackgroundImage"><div class="LoadingShellHeaderContent"><div class="LoadingHeader LoadingHeader-alignmentStart"><h1 class="LoadingHeaderHeading"><img alt="Quraany" src="https://cdn.shopify.com/s/files/1/0727/0747/3697/files/Quraany-Logo-Dark-BG_x320.svg?v=1678169918" width="196" height="59.90220048899756" class="LoadingHeaderImage"/></h1></div></div></header><div class="LoadingShellDisclosure ShopPay"><div class="LoadingShellDisclosureButton LoadingShellDisclosureButton-containerFill"><span class="LoadingShellDisclosureButtonContent FadeIn"><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-base"><span></span></span></span></span><span><span class="Text Text--size-large"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span></span></span></div></div><div class="LoadingShellContent LoadingShellContent-containerFill"><div class="LoadingShellMain"><div class="LoadingShellMainContent"><main class="LoadingShellMainContentPrimary FadeIn"><div class="SkeletonExpressCheckout"><div class="BlockStack BlockStack--spacing-base"><div class="BlockStack BlockStack--inline-alignment-center BlockStack--spacing-base"><span class="Text"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-base"><span></span></span></span></span></div><div class="SkeletonExpressCheckoutButtons"><div class="SkeletonButton"><div class="SkeletonButtonInner"></div></div><div class="SkeletonButton"><div class="SkeletonButtonInner"></div></div><div class="SkeletonButton"><div class="SkeletonButtonInner"></div></div></div></div><div class="ExpressCheckoutDivider"><div class="Divider"></div></div></div><div class="BlockStack BlockStack--spacing-large200"><div class="BlockStack BlockStack--spacing-base"><span class="Text Text--size-large"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span><div class="BlockStack BlockStack--spacing-small300"><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-full"><span></span></span></span></span><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-full"><span></span></span></span></span></div></div><div class="Divider"></div><div class="BlockStack BlockStack--spacing-base"><span class="Text Text--size-large"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span><div class="BlockStack BlockStack--spacing-small300"><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-full"><span></span></span></span></span><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-full"><span></span></span></span></span></div></div></div></main></div></div><div class="LoadingShellOrderSummary colorSchemeScheme2 backgroundColorBase"><div class="LoadingShellOrderSummaryContent"><aside class="LoadingShellOrderSummaryContentPrimary FadeIn"><div class="BlockStack BlockStack--spacing-large200"><h2 class="VisuallyHidden"></h2><div class="LoadingShellLineItems"><div class="LoadingShellLine"><div class="LoadingShellLineImageWrapper"><div class="SkeletonImage SkeletonImage--corner-radius-base"><span class="SkeletonImageInner"></span></div></div><div class="LoadingShellLineContent"><div class="BlockStack BlockStack--spacing-small500"><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-base"><span></span></span></span></span><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span></div></div><div class="LoadingShellLinePrice"><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span></div></div></div><div class="BlockStack BlockStack--spacing-small100"><div class="InlineStack InlineStack--spacing-base InlineStack--block-alignment-start InlineStack--inline-alignment-spaceBetween"><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span></div><div class="InlineStack InlineStack--spacing-base InlineStack--block-alignment-start InlineStack--inline-alignment-spaceBetween"><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span></div><div class="InlineStack InlineStack--spacing-base InlineStack--block-alignment-start InlineStack--inline-alignment-spaceBetween"><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span><span class="Text Text--size-small"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span></div><div class="InlineStack InlineStack--spacing-base InlineStack--block-alignment-start InlineStack--inline-alignment-spaceBetween"><span class="Text Text--size-large"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span><span class="Text Text--size-large"><span class="SkeletonText"><span class="SkeletonTextInner SkeletonTextInner--inline-size-small"><span></span></span></span></span></div></div></div></aside></div></div></div></div><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.latest.en.71e9826c9fb1316e5d29.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/871.latest.en.8997714476afe497313d.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/5719.latest.en.ba9459260384883d3736.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/4085.latest.en.e5fc3583e4e3f9075175.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.091f1dcb588a99c59913.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/2542.latest.en.e8b98a9ed829efc0c730.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/9769.latest.en.70da29fb07b87c11a9d1.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/2080.latest.en.5117e670600bcaf49bb5.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/5767.latest.en.3ffbbddfdbb89e007703.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/9649.latest.en.0086db1cd079b9b90daf.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/5718.latest.en.edeb715733aeb0b28426.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/2714.latest.en.e766c8d4497a09f17a2c.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/668.latest.en.4785167275f2826237e5.js" defer crossorigin></script><script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/OnePage.latest.en.b7b98bc4a87d370c8c16.js" defer crossorigin></script><link rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/871.latest.en.de22b83672b7fe512099.css" crossorigin/><link rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.eaaefad77ff32465e9ee.css" crossorigin/><link rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/6268.latest.en.6f2efe7028663b61d48a.css" crossorigin/><script>document.cookie = 'queue_token=' + "AnoLlv-LtXRFgdO2Ruy9dO-m_FTa-PHwINSd3oPUmgGRyc83rLc9ZaSXj8NvABOXovqdS9EdaeCUwhwtubry9QFOEHrnihIIy5yfU2qgQHGdzJGbuCrrK3Vz4g7gzriWJJg=" + '; path=/; max-age=3300';</script><meta name="serialized-session-token" content="&quot;ZWVQTFY2ZUhpWjlnMHhoQlZXeXZzWVFQY0UyQmtva0E2c3NXWm9laGdnWmNjQy8zR1daaGt6Uko1S3VnL3V3a3U4SXh5czZiNUp2bFBoeWNkQlBqeTRFbUZyMVBwcFBGamdFdnRGTUxBRUt2N0hkRStlc2JJd2JqNjdkRVFPY2lDQXYxVXNBUFE4RDFmY0dIRnYxOERTdnFhVVl3U0ZyV1p1T2s1WFZubEhWc0w3UFd4WE85QkpEb25OWGFBQ21wUHpRdVQ0T015ZjZKR3YzOFhLVG4yMXNnZmFEVUliVzQzQVJlMmJYTDVoZ011bjZxTWhUc0NGSW1iQ1R3TXVqZ1l1TmhhWDczVDZFdHFWNUdYUXdJZzVacTg4U3JxQUs1cjFZYjJwM1V2UT09LS01aXRPTGlBREhhYm5UV01ELS1SaGc0L0trenp1NjZnSWRmUDNSUkVnPT0&quot;"/><meta name="serialized-source-token" content="&quot;Z2NwLWFzaWEtc291dGhlYXN0MTowMUozWFlYMEM4SDdEQ0tKOFZHUU1YQ001UQ&quot;"/><meta name="serialized-checkout-session-identifier" content="&quot;dac4d12a724e7c5b2138409e52b85422&quot;"/><meta name="serialized-graphql" content="{&quot;5638616fb05cb50fa18d4cba4335a74898a1bfebfdc79a784e07dacd23898e17{}&quot;:{&quot;shop&quot;:{&quot;id&quot;:&quot;gid://shopify/Shop/72707473697&quot;,&quot;shippingCountries&quot;:[{&quot;value&quot;:&quot;MY&quot;,&quot;label&quot;:&quot;Malaysia&quot;,&quot;__typename&quot;:&quot;Country&quot;}],&quot;__typename&quot;:&quot;CheckoutShopConfig&quot;}},&quot;cdcfa226f384d02f33e2998aac284ccc313c08615b821080afbec5604d2e8249{}&quot;:{&quot;shop&quot;:{&quot;hostedFieldsUrl&quot;:&quot;https://checkout.shopifycs.com/dist/card_fields.js&quot;,&quot;domain&quot;:&quot;www.quraany.net&quot;,&quot;name&quot;:&quot;Quraany&quot;,&quot;id&quot;:&quot;gid://shopify/Shop/72707473697&quot;,&quot;allowExtensionDevelopment&quot;:false,&quot;merchantPolicies&quot;:[{&quot;handle&quot;:&quot;refund-policy&quot;,&quot;url&quot;:&quot;https://www.quraany.net/72707473697/policies/refund-policy.html?locale=en-MY&quot;,&quot;__typename&quot;:&quot;MerchantPolicy&quot;},{&quot;handle&quot;:&quot;privacy-policy&quot;,&quot;url&quot;:&quot;https://www.quraany.net/72707473697/policies/privacy-policy.html?locale=en-MY&quot;,&quot;__typename&quot;:&quot;MerchantPolicy&quot;},{&quot;handle&quot;:&quot;terms-of-service&quot;,&quot;url&quot;:&quot;https://www.quraany.net/72707473697/policies/terms-of-service.html?locale=en-MY&quot;,&quot;__typename&quot;:&quot;MerchantPolicy&quot;},{&quot;handle&quot;:&quot;subscription-policy&quot;,&quot;url&quot;:&quot;https://www.quraany.net/72707473697/policies/subscription-policy.html?locale=en-MY&quot;,&quot;__typename&quot;:&quot;MerchantPolicy&quot;}],&quot;country&quot;:{&quot;code&quot;:&quot;MY&quot;,&quot;name&quot;:&quot;Malaysia&quot;,&quot;localizationKeys&quot;:{&quot;address2&quot;:null,&quot;postalCode&quot;:&quot;postcode_label&quot;,&quot;zone&quot;:&quot;state_and_territory_label&quot;,&quot;neighborhood&quot;:null,&quot;__typename&quot;:&quot;AddressLocalizationKeys&quot;},&quot;labels&quot;:{&quot;firstName&quot;:&quot;First name&quot;,&quot;lastName&quot;:&quot;Last name&quot;,&quot;company&quot;:&quot;Company&quot;,&quot;address1&quot;:&quot;Address&quot;,&quot;address2&quot;:&quot;Apartment, suite, etc&quot;,&quot;city&quot;:&quot;City&quot;,&quot;country&quot;:&quot;Country/region&quot;,&quot;zone&quot;:&quot;State/territory&quot;,&quot;postalCode&quot;:&quot;Postcode&quot;,&quot;phone&quot;:&quot;Phone&quot;,&quot;__typename&quot;:&quot;AddressLabels&quot;},&quot;zones&quot;:[{&quot;code&quot;:&quot;JHR&quot;,&quot;name&quot;:&quot;Johor&quot;,&quot;nameWithAlternates&quot;:[&quot;Johor&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;KDH&quot;,&quot;name&quot;:&quot;Kedah&quot;,&quot;nameWithAlternates&quot;:[&quot;Kedah&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;KTN&quot;,&quot;name&quot;:&quot;Kelantan&quot;,&quot;nameWithAlternates&quot;:[&quot;Kelantan&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;KUL&quot;,&quot;name&quot;:&quot;Kuala Lumpur&quot;,&quot;nameWithAlternates&quot;:[&quot;Kuala Lumpur&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;LBN&quot;,&quot;name&quot;:&quot;Labuan&quot;,&quot;nameWithAlternates&quot;:[&quot;Labuan&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;MLK&quot;,&quot;name&quot;:&quot;Malacca&quot;,&quot;nameWithAlternates&quot;:[&quot;Melaka&quot;,&quot;Malacca&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;NSN&quot;,&quot;name&quot;:&quot;Negeri Sembilan&quot;,&quot;nameWithAlternates&quot;:[&quot;Negeri Sembilan&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PHG&quot;,&quot;name&quot;:&quot;Pahang&quot;,&quot;nameWithAlternates&quot;:[&quot;Pahang&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PNG&quot;,&quot;name&quot;:&quot;Penang&quot;,&quot;nameWithAlternates&quot;:[&quot;Penang&quot;,&quot;Pulau Pinang&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PRK&quot;,&quot;name&quot;:&quot;Perak&quot;,&quot;nameWithAlternates&quot;:[&quot;Perak&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PLS&quot;,&quot;name&quot;:&quot;Perlis&quot;,&quot;nameWithAlternates&quot;:[&quot;Perlis&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PJY&quot;,&quot;name&quot;:&quot;Putrajaya&quot;,&quot;nameWithAlternates&quot;:[&quot;Putrajaya&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;SBH&quot;,&quot;name&quot;:&quot;Sabah&quot;,&quot;nameWithAlternates&quot;:[&quot;Sabah&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;SWK&quot;,&quot;name&quot;:&quot;Sarawak&quot;,&quot;nameWithAlternates&quot;:[&quot;Sarawak&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;SGR&quot;,&quot;name&quot;:&quot;Selangor&quot;,&quot;nameWithAlternates&quot;:[&quot;Selangor&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;TRG&quot;,&quot;name&quot;:&quot;Terengganu&quot;,&quot;nameWithAlternates&quot;:[&quot;Terengganu&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;}],&quot;formatting&quot;:{&quot;edit&quot;:&quot;{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}{province}_{phone}&quot;,&quot;show&quot;:&quot;{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{province}_{country}_{phone}&quot;,&quot;__typename&quot;:&quot;AddressFormat&quot;},&quot;extendedFormatting&quot;:null,&quot;autocompletionField&quot;:&quot;ADDRESS1&quot;,&quot;neighborhoodRequired&quot;:false,&quot;streetNumberRequired&quot;:false,&quot;buildingNumberRequired&quot;:true,&quot;buildingNumberMayBeInAddress2&quot;:false,&quot;pureNumericPostalCode&quot;:true,&quot;postalCodeRequired&quot;:true,&quot;__typename&quot;:&quot;Country&quot;},&quot;popularBillingCountries&quot;:[],&quot;popularShippingCountries&quot;:[],&quot;storefront&quot;:{&quot;url&quot;:&quot;https://www.quraany.net&quot;,&quot;hasStorefront&quot;:true,&quot;__typename&quot;:&quot;CheckoutStorefrontConfig&quot;},&quot;theme&quot;:{&quot;id&quot;:&quot;145096933665&quot;,&quot;cityhash&quot;:&quot;5002631062943254318&quot;,&quot;__typename&quot;:&quot;ThemeConfig&quot;},&quot;trackingPixels&quot;:[],&quot;onlineStoreChat&quot;:null,&quot;facebookAppPixelId&quot;:null,&quot;facebookCapiEnabled&quot;:false,&quot;myshopifyDomain&quot;:&quot;quraany.myshopify.com&quot;,&quot;translations&quot;:&quot;{}&quot;,&quot;analyticsAccount&quot;:&quot;&quot;,&quot;enhancedEcommerceEnabled&quot;:false,&quot;customerAccountRequirement&quot;:&quot;OPTIONAL&quot;,&quot;emailMarketing&quot;:&quot;CHECKED&quot;,&quot;smsMarketing&quot;:&quot;OFF&quot;,&quot;shippingRatesReloadStrategy&quot;:{&quot;MY&quot;:3,&quot;AE&quot;:{&quot;AZ&quot;:3,&quot;AJ&quot;:3,&quot;DU&quot;:3,&quot;FU&quot;:3,&quot;RK&quot;:3,&quot;SH&quot;:3,&quot;UQ&quot;:3},&quot;AT&quot;:3,&quot;AU&quot;:{&quot;ACT&quot;:3,&quot;NSW&quot;:3,&quot;NT&quot;:3,&quot;QLD&quot;:3,&quot;SA&quot;:3,&quot;TAS&quot;:3,&quot;VIC&quot;:3,&quot;WA&quot;:3},&quot;BE&quot;:3,&quot;CA&quot;:{&quot;AB&quot;:3,&quot;BC&quot;:3,&quot;MB&quot;:3,&quot;NB&quot;:3,&quot;NL&quot;:3,&quot;NT&quot;:3,&quot;NS&quot;:3,&quot;NU&quot;:3,&quot;ON&quot;:3,&quot;PE&quot;:3,&quot;QC&quot;:3,&quot;SK&quot;:3,&quot;YT&quot;:3},&quot;CH&quot;:3,&quot;CZ&quot;:3,&quot;DE&quot;:3,&quot;DK&quot;:3,&quot;ES&quot;:{&quot;C&quot;:3,&quot;VI&quot;:3,&quot;AB&quot;:3,&quot;A&quot;:3,&quot;AL&quot;:3,&quot;O&quot;:3,&quot;AV&quot;:3,&quot;BA&quot;:3,&quot;PM&quot;:3,&quot;B&quot;:3,&quot;BU&quot;:3,&quot;CC&quot;:3,&quot;CA&quot;:3,&quot;S&quot;:3,&quot;CS&quot;:3,&quot;CE&quot;:3,&quot;CR&quot;:3,&quot;CO&quot;:3,&quot;CU&quot;:3,&quot;GI&quot;:3,&quot;GR&quot;:3,&quot;GU&quot;:3,&quot;SS&quot;:3,&quot;H&quot;:3,&quot;HU&quot;:3,&quot;J&quot;:3,&quot;LO&quot;:3,&quot;GC&quot;:3,&quot;LE&quot;:3,&quot;L&quot;:3,&quot;LU&quot;:3,&quot;M&quot;:3,&quot;MA&quot;:3,&quot;ML&quot;:3,&quot;MU&quot;:3,&quot;NA&quot;:3,&quot;OR&quot;:3,&quot;P&quot;:3,&quot;PO&quot;:3,&quot;SA&quot;:3,&quot;TF&quot;:3,&quot;SG&quot;:3,&quot;SE&quot;:3,&quot;SO&quot;:3,&quot;T&quot;:3,&quot;TE&quot;:3,&quot;TO&quot;:3,&quot;V&quot;:3,&quot;VA&quot;:3,&quot;BI&quot;:3,&quot;ZA&quot;:3,&quot;Z&quot;:3},&quot;FI&quot;:3,&quot;FR&quot;:3,&quot;GB&quot;:{&quot;BFP&quot;:3,&quot;ENG&quot;:3,&quot;NIR&quot;:3,&quot;SCT&quot;:3,&quot;WLS&quot;:3},&quot;HK&quot;:{&quot;HK&quot;:3,&quot;KL&quot;:3,&quot;NT&quot;:3},&quot;IE&quot;:{&quot;CW&quot;:3,&quot;CN&quot;:3,&quot;CE&quot;:3,&quot;CO&quot;:3,&quot;DL&quot;:3,&quot;D&quot;:3,&quot;G&quot;:3,&quot;KY&quot;:3,&quot;KE&quot;:3,&quot;KK&quot;:3,&quot;LS&quot;:3,&quot;LM&quot;:3,&quot;LK&quot;:3,&quot;LD&quot;:3,&quot;LH&quot;:3,&quot;MO&quot;:3,&quot;MH&quot;:3,&quot;MN&quot;:3,&quot;OY&quot;:3,&quot;RN&quot;:3,&quot;SO&quot;:3,&quot;TA&quot;:3,&quot;WD&quot;:3,&quot;WH&quot;:3,&quot;WX&quot;:3,&quot;WW&quot;:3},&quot;IL&quot;:3,&quot;IT&quot;:{&quot;AG&quot;:3,&quot;AL&quot;:3,&quot;AN&quot;:3,&quot;AO&quot;:3,&quot;AR&quot;:3,&quot;AP&quot;:3,&quot;AT&quot;:3,&quot;AV&quot;:3,&quot;BA&quot;:3,&quot;BT&quot;:3,&quot;BL&quot;:3,&quot;BN&quot;:3,&quot;BG&quot;:3,&quot;BI&quot;:3,&quot;BO&quot;:3,&quot;BZ&quot;:3,&quot;BS&quot;:3,&quot;BR&quot;:3,&quot;CA&quot;:3,&quot;CL&quot;:3,&quot;CB&quot;:3,&quot;CI&quot;:3,&quot;CE&quot;:3,&quot;CT&quot;:3,&quot;CZ&quot;:3,&quot;CH&quot;:3,&quot;CO&quot;:3,&quot;CS&quot;:3,&quot;CR&quot;:3,&quot;KR&quot;:3,&quot;CN&quot;:3,&quot;EN&quot;:3,&quot;FM&quot;:3,&quot;FE&quot;:3,&quot;FI&quot;:3,&quot;FG&quot;:3,&quot;FC&quot;:3,&quot;FR&quot;:3,&quot;GE&quot;:3,&quot;GO&quot;:3,&quot;GR&quot;:3,&quot;IM&quot;:3,&quot;IS&quot;:3,&quot;AQ&quot;:3,&quot;SP&quot;:3,&quot;LT&quot;:3,&quot;LE&quot;:3,&quot;LC&quot;:3,&quot;LI&quot;:3,&quot;LO&quot;:3,&quot;LU&quot;:3,&quot;MC&quot;:3,&quot;MN&quot;:3,&quot;MS&quot;:3,&quot;MT&quot;:3,&quot;VS&quot;:3,&quot;ME&quot;:3,&quot;MI&quot;:3,&quot;MO&quot;:3,&quot;MB&quot;:3,&quot;NA&quot;:3,&quot;NO&quot;:3,&quot;NU&quot;:3,&quot;OG&quot;:3,&quot;OT&quot;:3,&quot;OR&quot;:3,&quot;PD&quot;:3,&quot;PA&quot;:3,&quot;PR&quot;:3,&quot;PV&quot;:3,&quot;PG&quot;:3,&quot;PU&quot;:3,&quot;PE&quot;:3,&quot;PC&quot;:3,&quot;PI&quot;:3,&quot;PT&quot;:3,&quot;PN&quot;:3,&quot;PZ&quot;:3,&quot;PO&quot;:3,&quot;RG&quot;:3,&quot;RA&quot;:3,&quot;RC&quot;:3,&quot;RE&quot;:3,&quot;RI&quot;:3,&quot;RN&quot;:3,&quot;RM&quot;:3,&quot;RO&quot;:3,&quot;SA&quot;:3,&quot;SS&quot;:3,&quot;SV&quot;:3,&quot;SI&quot;:3,&quot;SR&quot;:3,&quot;SO&quot;:3,&quot;TA&quot;:3,&quot;TE&quot;:3,&quot;TR&quot;:3,&quot;TO&quot;:3,&quot;TP&quot;:3,&quot;TN&quot;:3,&quot;TV&quot;:3,&quot;TS&quot;:3,&quot;UD&quot;:3,&quot;VA&quot;:3,&quot;VE&quot;:3,&quot;VB&quot;:3,&quot;VC&quot;:3,&quot;VR&quot;:3,&quot;VV&quot;:3,&quot;VI&quot;:3,&quot;VT&quot;:3},&quot;JP&quot;:{&quot;JP-01&quot;:3,&quot;JP-02&quot;:3,&quot;JP-03&quot;:3,&quot;JP-04&quot;:3,&quot;JP-05&quot;:3,&quot;JP-06&quot;:3,&quot;JP-07&quot;:3,&quot;JP-08&quot;:3,&quot;JP-09&quot;:3,&quot;JP-10&quot;:3,&quot;JP-11&quot;:3,&quot;JP-12&quot;:3,&quot;JP-13&quot;:3,&quot;JP-14&quot;:3,&quot;JP-15&quot;:3,&quot;JP-16&quot;:3,&quot;JP-17&quot;:3,&quot;JP-18&quot;:3,&quot;JP-19&quot;:3,&quot;JP-20&quot;:3,&quot;JP-21&quot;:3,&quot;JP-22&quot;:3,&quot;JP-23&quot;:3,&quot;JP-24&quot;:3,&quot;JP-25&quot;:3,&quot;JP-26&quot;:3,&quot;JP-27&quot;:3,&quot;JP-28&quot;:3,&quot;JP-29&quot;:3,&quot;JP-30&quot;:3,&quot;JP-31&quot;:3,&quot;JP-32&quot;:3,&quot;JP-33&quot;:3,&quot;JP-34&quot;:3,&quot;JP-35&quot;:3,&quot;JP-36&quot;:3,&quot;JP-37&quot;:3,&quot;JP-38&quot;:3,&quot;JP-39&quot;:3,&quot;JP-40&quot;:3,&quot;JP-41&quot;:3,&quot;JP-42&quot;:3,&quot;JP-43&quot;:3,&quot;JP-44&quot;:3,&quot;JP-45&quot;:3,&quot;JP-46&quot;:3,&quot;JP-47&quot;:3},&quot;KR&quot;:{&quot;KR-26&quot;:3,&quot;KR-43&quot;:3,&quot;KR-44&quot;:3,&quot;KR-27&quot;:3,&quot;KR-30&quot;:3,&quot;KR-42&quot;:3,&quot;KR-29&quot;:3,&quot;KR-47&quot;:3,&quot;KR-41&quot;:3,&quot;KR-48&quot;:3,&quot;KR-28&quot;:3,&quot;KR-49&quot;:3,&quot;KR-45&quot;:3,&quot;KR-46&quot;:3,&quot;KR-50&quot;:3,&quot;KR-11&quot;:3,&quot;KR-31&quot;:3},&quot;NL&quot;:3,&quot;NO&quot;:3,&quot;NZ&quot;:{&quot;AUK&quot;:3,&quot;BOP&quot;:3,&quot;CAN&quot;:3,&quot;CIT&quot;:3,&quot;GIS&quot;:3,&quot;HKB&quot;:3,&quot;MWT&quot;:3,&quot;MBH&quot;:3,&quot;NSN&quot;:3,&quot;NTL&quot;:3,&quot;OTA&quot;:3,&quot;STL&quot;:3,&quot;TKI&quot;:3,&quot;TAS&quot;:3,&quot;WKO&quot;:3,&quot;WGN&quot;:3,&quot;WTC&quot;:3},&quot;PL&quot;:3,&quot;PT&quot;:{&quot;PT-20&quot;:3,&quot;PT-01&quot;:3,&quot;PT-02&quot;:3,&quot;PT-03&quot;:3,&quot;PT-04&quot;:3,&quot;PT-05&quot;:3,&quot;PT-06&quot;:3,&quot;PT-07&quot;:3,&quot;PT-08&quot;:3,&quot;PT-09&quot;:3,&quot;PT-10&quot;:3,&quot;PT-11&quot;:3,&quot;PT-30&quot;:3,&quot;PT-12&quot;:3,&quot;PT-13&quot;:3,&quot;PT-14&quot;:3,&quot;PT-15&quot;:3,&quot;PT-16&quot;:3,&quot;PT-17&quot;:3,&quot;PT-18&quot;:3},&quot;SE&quot;:3,&quot;SG&quot;:3,&quot;US&quot;:{&quot;AL&quot;:3,&quot;AK&quot;:3,&quot;AS&quot;:3,&quot;AZ&quot;:3,&quot;AR&quot;:3,&quot;CA&quot;:3,&quot;CO&quot;:3,&quot;CT&quot;:3,&quot;DE&quot;:3,&quot;DC&quot;:3,&quot;FM&quot;:3,&quot;FL&quot;:3,&quot;GA&quot;:3,&quot;GU&quot;:3,&quot;HI&quot;:3,&quot;ID&quot;:3,&quot;IL&quot;:3,&quot;IN&quot;:3,&quot;IA&quot;:3,&quot;KS&quot;:3,&quot;KY&quot;:3,&quot;LA&quot;:3,&quot;ME&quot;:3,&quot;MH&quot;:3,&quot;MD&quot;:3,&quot;MA&quot;:3,&quot;MI&quot;:3,&quot;MN&quot;:3,&quot;MS&quot;:3,&quot;MO&quot;:3,&quot;MT&quot;:3,&quot;NE&quot;:3,&quot;NV&quot;:3,&quot;NH&quot;:3,&quot;NJ&quot;:3,&quot;NM&quot;:3,&quot;NY&quot;:3,&quot;NC&quot;:3,&quot;ND&quot;:3,&quot;MP&quot;:3,&quot;OH&quot;:3,&quot;OK&quot;:3,&quot;OR&quot;:3,&quot;PW&quot;:3,&quot;PA&quot;:3,&quot;PR&quot;:3,&quot;RI&quot;:3,&quot;SC&quot;:3,&quot;SD&quot;:3,&quot;TN&quot;:3,&quot;TX&quot;:3,&quot;UT&quot;:3,&quot;VT&quot;:3,&quot;VA&quot;:3,&quot;WA&quot;:3,&quot;WV&quot;:3,&quot;WI&quot;:3,&quot;WY&quot;:3,&quot;VI&quot;:3,&quot;AA&quot;:3,&quot;AE&quot;:3,&quot;AP&quot;:3}},&quot;billingAddressFormSettings&quot;:{&quot;address2&quot;:{&quot;mode&quot;:&quot;OPTIONAL&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;company&quot;:{&quot;mode&quot;:&quot;IGNORED&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;firstName&quot;:{&quot;mode&quot;:&quot;REQUIRED&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;phone&quot;:{&quot;mode&quot;:&quot;OPTIONAL&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;addressAutocompletion&quot;:true,&quot;__typename&quot;:&quot;BillingAddressFormSettings&quot;},&quot;shopConfigurations&quot;:{&quot;defaultConfiguration&quot;:{&quot;contactInfoOptions&quot;:[&quot;EMAIL&quot;],&quot;addressFormSettings&quot;:{&quot;address2&quot;:{&quot;mode&quot;:&quot;OPTIONAL&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;company&quot;:{&quot;mode&quot;:&quot;IGNORED&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;firstName&quot;:{&quot;mode&quot;:&quot;REQUIRED&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;phone&quot;:{&quot;mode&quot;:&quot;REQUIRED&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;addressAutocompletion&quot;:true,&quot;addressValidation&quot;:true,&quot;__typename&quot;:&quot;AddressFormSettings&quot;},&quot;__typename&quot;:&quot;CountryConfiguration&quot;},&quot;countrySpecificConfigurations&quot;:[{&quot;countries&quot;:[&quot;MY&quot;],&quot;configuration&quot;:{&quot;contactInfoOptions&quot;:[&quot;EMAIL&quot;],&quot;addressFormSettings&quot;:{&quot;address2&quot;:{&quot;mode&quot;:&quot;OPTIONAL&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;company&quot;:{&quot;mode&quot;:&quot;IGNORED&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;firstName&quot;:{&quot;mode&quot;:&quot;REQUIRED&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;phone&quot;:{&quot;mode&quot;:&quot;REQUIRED&quot;,&quot;__typename&quot;:&quot;AddressFormField&quot;},&quot;addressAutocompletion&quot;:true,&quot;__typename&quot;:&quot;AddressFormSettings&quot;},&quot;__typename&quot;:&quot;CountryConfiguration&quot;},&quot;__typename&quot;:&quot;CountrySpecificConfiguration&quot;}],&quot;__typename&quot;:&quot;ShopConfigurations&quot;},&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;timeZone&quot;:&quot;Asia/Kuala_Lumpur&quot;,&quot;enabledFlags&quot;:[&quot;58dc8563&quot;,&quot;8466ea4f&quot;,&quot;778675f5&quot;,&quot;e2c263c1&quot;,&quot;a4e96e06&quot;,&quot;01f2e187&quot;,&quot;858206ee&quot;,&quot;d424fda1&quot;,&quot;4735909c&quot;,&quot;5de24938&quot;],&quot;enabledDeliveryMethods&quot;:[&quot;SHIPPING&quot;],&quot;giftCardsEnabled&quot;:false,&quot;discountCodesEnabled&quot;:true,&quot;contactEmail&quot;:&quot;help@quraany.net&quot;,&quot;acceptTipPayments&quot;:true,&quot;showTipPayments&quot;:true,&quot;postPurchaseExtensionAvailable&quot;:false,&quot;postPurchaseDevelopmentModeAvailable&quot;:false,&quot;postPurchaseAdditionalTrackingScript&quot;:null,&quot;confirmationPageEnabled&quot;:false,&quot;hasAdditionalGoogleAnalyticsScript&quot;:false,&quot;customerAccountLocationsUrl&quot;:&quot;https://shopify.com/72707473697/account/locations?return_to=https%3A%2F%2Fwww.quraany.net%2Fcheckouts%2Fcn%2FZ2NwLWFzaWEtc291dGhlYXN0MTowMUozWFlYMEM4SDdEQ0tKOFZHUU1YQ001UQ%3Fdiscount%3D&quot;,&quot;loginLinkVisible&quot;:true,&quot;shopPayEnabled&quot;:false,&quot;storeVaultEnabled&quot;:false,&quot;storeVaultCvvVerificationAtGuestCheckoutEnabled&quot;:false,&quot;webPixelConfigurations&quot;:[{&quot;idTmp&quot;:&quot;175341857&quot;,&quot;configuration&quot;:&quot;{\&quot;accountID\&quot;:\&quot;82f25811-b8d7-463e-980a-687c6e4ebc88\&quot;}&quot;,&quot;eventPayloadVersion&quot;:&quot;v1&quot;,&quot;runtimeContext&quot;:&quot;STRICT&quot;,&quot;scriptVersion&quot;:&quot;fd9d2f026baa888ddf8a4e28803dd8d1&quot;,&quot;type&quot;:&quot;APP&quot;,&quot;apiClientId&quot;:&quot;5433881&quot;,&quot;purposes&quot;:[&quot;ANALYTICS&quot;,&quot;MARKETING&quot;,&quot;SALE_OF_DATA&quot;],&quot;name&quot;:null,&quot;__typename&quot;:&quot;WebPixelConfiguration&quot;},{&quot;idTmp&quot;:&quot;shopify-app-pixel&quot;,&quot;configuration&quot;:&quot;{}&quot;,&quot;eventPayloadVersion&quot;:&quot;v1&quot;,&quot;runtimeContext&quot;:&quot;STRICT&quot;,&quot;scriptVersion&quot;:&quot;0142&quot;,&quot;type&quot;:&quot;APP&quot;,&quot;apiClientId&quot;:&quot;shopify-pixel&quot;,&quot;purposes&quot;:[&quot;ANALYTICS&quot;,&quot;MARKETING&quot;],&quot;name&quot;:null,&quot;__typename&quot;:&quot;WebPixelConfiguration&quot;},{&quot;idTmp&quot;:&quot;shopify-custom-pixel&quot;,&quot;configuration&quot;:null,&quot;eventPayloadVersion&quot;:&quot;v1&quot;,&quot;runtimeContext&quot;:&quot;LAX&quot;,&quot;scriptVersion&quot;:&quot;0142&quot;,&quot;type&quot;:&quot;CUSTOM&quot;,&quot;apiClientId&quot;:&quot;shopify-pixel&quot;,&quot;purposes&quot;:[&quot;ANALYTICS&quot;,&quot;MARKETING&quot;],&quot;name&quot;:null,&quot;__typename&quot;:&quot;WebPixelConfiguration&quot;}],&quot;webPixelManagerVersion&quot;:&quot;b6744396w75486a04p5e370dd6m2c438054&quot;,&quot;linkToArriveApp&quot;:false,&quot;sameBillingAndShippingAddress&quot;:true,&quot;requireMatchingShippingAndBilling&quot;:false,&quot;prefetchShippingRatesEnabled&quot;:true,&quot;captureAtFulfillmentEnabled&quot;:false,&quot;developmentShop&quot;:false,&quot;customerAccountDomain&quot;:&quot;shopify.com&quot;,&quot;checkoutPublicAccessToken&quot;:&quot;YjQ3ZjI1M2JhNjBiNzY4ODY5M2ZiZWU0Yzk0MmI4YTU6\n&quot;,&quot;asyncDeliveryPromiseExperienceEnabled&quot;:false,&quot;paymentMethodAutoSelectionDisabled&quot;:false,&quot;__typename&quot;:&quot;CheckoutShopConfig&quot;},&quot;checkoutProfile&quot;:{&quot;id&quot;:&quot;gid://shopify/CheckoutProfile/409895201&quot;,&quot;activatedExtensions&quot;:[],&quot;__typename&quot;:&quot;CheckoutProfile&quot;},&quot;globalCheckoutUiExtensions&quot;:[],&quot;cardsinkUrl&quot;:&quot;https://deposit.us.shopifycs.com/sessions&quot;,&quot;extensionsAssetsPath&quot;:&quot;https://extensions.shopifycdn.com/shopifycloud/checkout-web/assets/&quot;},&quot;dc3d0be79ec8763a1aa393ecb159ecedf73bc406dc8532bb5f64785ee25dc912{}&quot;:{&quot;shop&quot;:{&quot;defaultShippingDetails&quot;:{&quot;country&quot;:{&quot;name&quot;:&quot;Malaysia&quot;,&quot;code&quot;:&quot;MY&quot;,&quot;localizationKeys&quot;:{&quot;address2&quot;:null,&quot;postalCode&quot;:&quot;postcode_label&quot;,&quot;zone&quot;:&quot;state_and_territory_label&quot;,&quot;neighborhood&quot;:null,&quot;__typename&quot;:&quot;AddressLocalizationKeys&quot;},&quot;labels&quot;:{&quot;firstName&quot;:&quot;First name&quot;,&quot;lastName&quot;:&quot;Last name&quot;,&quot;company&quot;:&quot;Company&quot;,&quot;address1&quot;:&quot;Address&quot;,&quot;address2&quot;:&quot;Apartment, suite, etc&quot;,&quot;city&quot;:&quot;City&quot;,&quot;country&quot;:&quot;Country/region&quot;,&quot;zone&quot;:&quot;State/territory&quot;,&quot;postalCode&quot;:&quot;Postcode&quot;,&quot;phone&quot;:&quot;Phone&quot;,&quot;__typename&quot;:&quot;AddressLabels&quot;},&quot;zones&quot;:[{&quot;code&quot;:&quot;JHR&quot;,&quot;name&quot;:&quot;Johor&quot;,&quot;nameWithAlternates&quot;:[&quot;Johor&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;KDH&quot;,&quot;name&quot;:&quot;Kedah&quot;,&quot;nameWithAlternates&quot;:[&quot;Kedah&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;KTN&quot;,&quot;name&quot;:&quot;Kelantan&quot;,&quot;nameWithAlternates&quot;:[&quot;Kelantan&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;KUL&quot;,&quot;name&quot;:&quot;Kuala Lumpur&quot;,&quot;nameWithAlternates&quot;:[&quot;Kuala Lumpur&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;LBN&quot;,&quot;name&quot;:&quot;Labuan&quot;,&quot;nameWithAlternates&quot;:[&quot;Labuan&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;MLK&quot;,&quot;name&quot;:&quot;Malacca&quot;,&quot;nameWithAlternates&quot;:[&quot;Melaka&quot;,&quot;Malacca&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;NSN&quot;,&quot;name&quot;:&quot;Negeri Sembilan&quot;,&quot;nameWithAlternates&quot;:[&quot;Negeri Sembilan&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PHG&quot;,&quot;name&quot;:&quot;Pahang&quot;,&quot;nameWithAlternates&quot;:[&quot;Pahang&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PNG&quot;,&quot;name&quot;:&quot;Penang&quot;,&quot;nameWithAlternates&quot;:[&quot;Penang&quot;,&quot;Pulau Pinang&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PRK&quot;,&quot;name&quot;:&quot;Perak&quot;,&quot;nameWithAlternates&quot;:[&quot;Perak&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PLS&quot;,&quot;name&quot;:&quot;Perlis&quot;,&quot;nameWithAlternates&quot;:[&quot;Perlis&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;PJY&quot;,&quot;name&quot;:&quot;Putrajaya&quot;,&quot;nameWithAlternates&quot;:[&quot;Putrajaya&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;SBH&quot;,&quot;name&quot;:&quot;Sabah&quot;,&quot;nameWithAlternates&quot;:[&quot;Sabah&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;SWK&quot;,&quot;name&quot;:&quot;Sarawak&quot;,&quot;nameWithAlternates&quot;:[&quot;Sarawak&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;SGR&quot;,&quot;name&quot;:&quot;Selangor&quot;,&quot;nameWithAlternates&quot;:[&quot;Selangor&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;},{&quot;code&quot;:&quot;TRG&quot;,&quot;name&quot;:&quot;Terengganu&quot;,&quot;nameWithAlternates&quot;:[&quot;Terengganu&quot;],&quot;__typename&quot;:&quot;AddressZone&quot;}],&quot;formatting&quot;:{&quot;edit&quot;:&quot;{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}{province}_{phone}&quot;,&quot;show&quot;:&quot;{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{province}_{country}_{phone}&quot;,&quot;__typename&quot;:&quot;AddressFormat&quot;},&quot;extendedFormatting&quot;:null,&quot;autocompletionField&quot;:&quot;ADDRESS1&quot;,&quot;neighborhoodRequired&quot;:false,&quot;streetNumberRequired&quot;:false,&quot;buildingNumberRequired&quot;:true,&quot;buildingNumberMayBeInAddress2&quot;:false,&quot;pureNumericPostalCode&quot;:true,&quot;postalCodeRequired&quot;:true,&quot;__typename&quot;:&quot;Country&quot;},&quot;zone&quot;:{&quot;code&quot;:&quot;JHR&quot;,&quot;__typename&quot;:&quot;AddressZone&quot;},&quot;__typename&quot;:&quot;DefaultShippingDetails&quot;},&quot;__typename&quot;:&quot;CheckoutShopConfig&quot;},&quot;httpRequestInfo&quot;:{&quot;locale&quot;:&quot;en-MY&quot;,&quot;localeDirection&quot;:&quot;ltr&quot;,&quot;geolocation&quot;:{&quot;country&quot;:{&quot;code&quot;:&quot;BD&quot;,&quot;name&quot;:&quot;Bangladesh&quot;,&quot;localizationKeys&quot;:{&quot;address2&quot;:null,&quot;postalCode&quot;:null,&quot;zone&quot;:&quot;region_label&quot;,&quot;neighborhood&quot;:null,&quot;__typename&quot;:&quot;AddressLocalizationKeys&quot;},&quot;labels&quot;:{&quot;firstName&quot;:&quot;First name&quot;,&quot;lastName&quot;:&quot;Last name&quot;,&quot;company&quot;:&quot;Company&quot;,&quot;address1&quot;:&quot;Address&quot;,&quot;address2&quot;:&quot;Apartment, suite, etc&quot;,&quot;city&quot;:&quot;City&quot;,&quot;country&quot;:&quot;Country/region&quot;,&quot;zone&quot;:&quot;Region&quot;,&quot;postalCode&quot;:&quot;Postal code&quot;,&quot;phone&quot;:&quot;Phone&quot;,&quot;__typename&quot;:&quot;AddressLabels&quot;},&quot;zones&quot;:[],&quot;formatting&quot;:{&quot;edit&quot;:&quot;{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}&quot;,&quot;show&quot;:&quot;{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}&quot;,&quot;__typename&quot;:&quot;AddressFormat&quot;},&quot;extendedFormatting&quot;:null,&quot;autocompletionField&quot;:&quot;ADDRESS1&quot;,&quot;neighborhoodRequired&quot;:false,&quot;streetNumberRequired&quot;:false,&quot;buildingNumberRequired&quot;:false,&quot;buildingNumberMayBeInAddress2&quot;:false,&quot;pureNumericPostalCode&quot;:true,&quot;postalCodeRequired&quot;:false,&quot;__typename&quot;:&quot;Country&quot;},&quot;zone&quot;:null,&quot;coordinates&quot;:{&quot;latitude&quot;:23.7018,&quot;longitude&quot;:90.3742,&quot;__typename&quot;:&quot;GeographicalCoordinates&quot;},&quot;__typename&quot;:&quot;Geolocation&quot;},&quot;__typename&quot;:&quot;HttpRequestInfo&quot;},&quot;mobileCheckoutSdkConfig&quot;:{&quot;checkoutAuthenticationResult&quot;:null,&quot;colorScheme&quot;:&quot;LIGHT&quot;,&quot;version&quot;:null,&quot;schema&quot;:null,&quot;variant&quot;:null,&quot;suppressPixels&quot;:true,&quot;__typename&quot;:&quot;MobileCheckoutSdkConfig&quot;},&quot;checkoutSheetProtocolConfig&quot;:null},&quot;8f4340ad9ec645c062b6f73352274d516c703c280d543e92c13aefa6d68a1462{}&quot;:{&quot;shop&quot;:{&quot;id&quot;:&quot;gid://shopify/Shop/72707473697&quot;,&quot;designSystem&quot;:{&quot;colors&quot;:{&quot;global&quot;:{&quot;brand&quot;:&quot;hsl(237.128, 43.259%, 30.543%)&quot;,&quot;accent&quot;:&quot;hsl(237.128, 43.259%, 30.543%)&quot;,&quot;decorative&quot;:null,&quot;success&quot;:null,&quot;warning&quot;:null,&quot;critical&quot;:&quot;hsl(28.341, 46.23%, 63.007%)&quot;,&quot;info&quot;:null,&quot;__typename&quot;:&quot;ColorGlobal&quot;},&quot;schemes&quot;:null,&quot;__typename&quot;:&quot;Colors&quot;},&quot;typography&quot;:null,&quot;cornerRadius&quot;:null,&quot;__typename&quot;:&quot;DesignSystem&quot;},&quot;customizations&quot;:{&quot;global&quot;:null,&quot;divider&quot;:null,&quot;favicon&quot;:null,&quot;content&quot;:null,&quot;main&quot;:null,&quot;expressCheckout&quot;:null,&quot;orderSummary&quot;:null,&quot;header&quot;:{&quot;alignment&quot;:null,&quot;position&quot;:&quot;START&quot;,&quot;blockPadding&quot;:null,&quot;background&quot;:null,&quot;colorScheme&quot;:null,&quot;padding&quot;:null,&quot;divided&quot;:null,&quot;logo&quot;:{&quot;image&quot;:{&quot;main&quot;:&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/Quraany-Logo-Dark-BG_x320.svg?v=1678169918&quot;,&quot;height&quot;:162,&quot;width&quot;:530,&quot;altText&quot;:&quot;&quot;,&quot;__typename&quot;:&quot;Image&quot;},&quot;maxWidth&quot;:196,&quot;visibility&quot;:null,&quot;__typename&quot;:&quot;HeaderLogoCustomizations&quot;},&quot;banner&quot;:{&quot;image&quot;:{&quot;main&quot;:&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/About_1_2000x.jpg?v=1678535211&quot;,&quot;__typename&quot;:&quot;Image&quot;},&quot;__typename&quot;:&quot;HeaderBannerCustomizations&quot;},&quot;cartLink&quot;:null,&quot;__typename&quot;:&quot;HeaderCustomizations&quot;},&quot;footer&quot;:null,&quot;cartLink&quot;:null,&quot;buyerJourney&quot;:null,&quot;headingLevel1&quot;:null,&quot;headingLevel2&quot;:null,&quot;headingLevel3&quot;:null,&quot;control&quot;:null,&quot;label&quot;:null,&quot;select&quot;:null,&quot;textField&quot;:null,&quot;checkbox&quot;:null,&quot;choiceList&quot;:null,&quot;primaryButton&quot;:null,&quot;secondaryButton&quot;:null,&quot;merchandiseThumbnail&quot;:null,&quot;__typename&quot;:&quot;CheckoutCustomizations&quot;},&quot;__typename&quot;:&quot;CheckoutShopConfig&quot;}},&quot;17abfbda478377e33b381d0fbf8da624f568ac441292b75c21961bda30a92959{\&quot;checkpointData\&quot;:null,\&quot;queueToken\&quot;:null}&quot;:{&quot;session&quot;:{&quot;context&quot;:{&quot;session&quot;:[],&quot;policies&quot;:{&quot;fees&quot;:[],&quot;payment&quot;:[],&quot;buyerIdentity&quot;:[],&quot;tax&quot;:[],&quot;discount&quot;:[],&quot;merchandise&quot;:[],&quot;tip&quot;:[],&quot;delivery&quot;:[],&quot;__typename&quot;:&quot;PolicyFactSet&quot;},&quot;__typename&quot;:&quot;NegotiationContext&quot;},&quot;sessionType&quot;:&quot;CART_API&quot;,&quot;sourceId&quot;:&quot;Z2NwLWFzaWEtc291dGhlYXN0MTowMUozWFlYMEM4SDdEQ0tKOFZHUU1YQ001UQ&quot;,&quot;sourceVersion&quot;:null,&quot;checkoutSessionIdentifier&quot;:&quot;dac4d12a724e7c5b2138409e52b85422&quot;,&quot;storefrontAnalyticsStartedOrderEventId&quot;:null,&quot;cartReturnUrl&quot;:&quot;https://www.quraany.net/cart&quot;,&quot;headerLogoUrl&quot;:&quot;https://www.quraany.net&quot;,&quot;previewScript&quot;:null,&quot;negotiate&quot;:{&quot;result&quot;:{&quot;queueToken&quot;:&quot;AnoLlv-LtXRFgdO2Ruy9dO-m_FTa-PHwINSd3oPUmgGRyc83rLc9ZaSXj8NvABOXovqdS9EdaeCUwhwtubry9QFOEHrnihIIy5yfU2qgQHGdzJGbuCrrK3Vz4g7gzriWJJg=&quot;,&quot;buyerProposal&quot;:{&quot;buyerIdentity&quot;:{&quot;contactInfoV2&quot;:null,&quot;customer&quot;:{&quot;__typename&quot;:&quot;GuestProfile&quot;},&quot;__typename&quot;:&quot;FilledBuyerIdentityTerms&quot;},&quot;merchandiseDiscount&quot;:{&quot;__typename&quot;:&quot;FilledDiscountTerms&quot;,&quot;acceptUnexpectedDiscounts&quot;:true,&quot;lines&quot;:[]},&quot;deliveryDiscount&quot;:{&quot;__typename&quot;:&quot;FilledDiscountTerms&quot;,&quot;acceptUnexpectedDiscounts&quot;:true,&quot;lines&quot;:[]},&quot;delivery&quot;:{&quot;__typename&quot;:&quot;FilledDeliveryTerms&quot;,&quot;intermediateRates&quot;:false,&quot;progressiveRatesEstimatedTimeUntilCompletion&quot;:0,&quot;shippingRatesStatusToken&quot;:&quot;&quot;,&quot;deliveryLines&quot;:[{&quot;destinationAddress&quot;:null,&quot;targetMerchandise&quot;:{&quot;linesV2&quot;:[{&quot;stableId&quot;:&quot;f252606d-cf60-4460-a2cc-ba5b1bb8ced7&quot;,&quot;quantity&quot;:{&quot;items&quot;:{&quot;value&quot;:1,&quot;__typename&quot;:&quot;IntValueConstraint&quot;},&quot;__typename&quot;:&quot;ProposalMerchandiseQuantityByItem&quot;},&quot;merchandise&quot;:{&quot;__typename&quot;:&quot;ProductVariantMerchandise&quot;,&quot;requiresShipping&quot;:false},&quot;totalAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;__typename&quot;:&quot;MerchandiseLine&quot;}],&quot;__typename&quot;:&quot;FilledMerchandiseLineTargetCollection&quot;},&quot;groupType&quot;:&quot;SUBSCRIPTION&quot;,&quot;deliveryMethodTypes&quot;:[&quot;NONE&quot;],&quot;selectedDeliveryStrategy&quot;:{&quot;__typename&quot;:&quot;DeliveryStrategyMatcher&quot;},&quot;availableDeliveryStrategies&quot;:[],&quot;__typename&quot;:&quot;DeliveryLine&quot;}]},&quot;merchandise&quot;:{&quot;taxesIncluded&quot;:false,&quot;merchandiseLines&quot;:[{&quot;stableId&quot;:&quot;f252606d-cf60-4460-a2cc-ba5b1bb8ced7&quot;,&quot;merchandise&quot;:{&quot;__typename&quot;:&quot;ProductVariantMerchandise&quot;,&quot;id&quot;:&quot;gid://shopify/ProductVariantMerchandise/48289337540897&quot;,&quot;digest&quot;:&quot;c814e9e766e4eda4637cf3f65d5c0f12&quot;,&quot;variantId&quot;:&quot;gid://shopify/ProductVariant/48289337540897&quot;,&quot;title&quot;:&quot;Automated Quran Sponsorship Sadaqa Jaariyah&quot;,&quot;untranslatedTitle&quot;:&quot;Automated Quran Sponsorship Sadaqa Jaariyah&quot;,&quot;subtitle&quot;:&quot;1 Quran&quot;,&quot;untranslatedSubtitle&quot;:&quot;1 Quran&quot;,&quot;product&quot;:{&quot;id&quot;:&quot;gid://shopify/Product/8938148102433&quot;,&quot;vendor&quot;:&quot;Quraany Global&quot;,&quot;productType&quot;:&quot;Quran&quot;,&quot;__typename&quot;:&quot;Product&quot;},&quot;productUrl&quot;:&quot;/products/sadaqajaariyah&quot;,&quot;image&quot;:{&quot;altText&quot;:null,&quot;one&quot;:&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/subscription_64x64.jpg?v=1706079287&quot;,&quot;two&quot;:&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/subscription_128x128.jpg?v=1706079287&quot;,&quot;four&quot;:&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/subscription_256x256.jpg?v=1706079287&quot;,&quot;__typename&quot;:&quot;Image&quot;},&quot;properties&quot;:[{&quot;name&quot;:&quot;__appstle-selected-selling-plan&quot;,&quot;value&quot;:{&quot;string&quot;:&quot;689493934369&quot;,&quot;__typename&quot;:&quot;MerchandisePropertyValueString&quot;},&quot;visible&quot;:false,&quot;__typename&quot;:&quot;MerchandiseProperty&quot;}],&quot;requiresShipping&quot;:false,&quot;options&quot;:[{&quot;name&quot;:&quot;Qurans&quot;,&quot;value&quot;:&quot;1 Quran&quot;,&quot;__typename&quot;:&quot;ProductVariantOption&quot;}],&quot;sellingPlan&quot;:{&quot;id&quot;:&quot;gid://shopify/SellingPlan/689493934369&quot;,&quot;subscriptionDetails&quot;:{&quot;billingInterval&quot;:&quot;MONTH&quot;,&quot;__typename&quot;:&quot;SellingPlanSubscriptionDetails&quot;},&quot;__typename&quot;:&quot;SellingPlan&quot;},&quot;giftCard&quot;:false},&quot;quantity&quot;:{&quot;items&quot;:{&quot;value&quot;:1,&quot;__typename&quot;:&quot;IntValueConstraint&quot;},&quot;__typename&quot;:&quot;ProposalMerchandiseQuantityByItem&quot;},&quot;totalAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;recurringTotal&quot;:{&quot;title&quot;:&quot;Automated Quran Sponsorship Sadaqa Jaariyah - 1 Quran&quot;,&quot;interval&quot;:&quot;MONTH&quot;,&quot;intervalCount&quot;:1,&quot;recurringPrice&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;fixedPrice&quot;:null,&quot;fixedPriceCount&quot;:null,&quot;__typename&quot;:&quot;SubscriptionRecurringTotal&quot;},&quot;lineAllocations&quot;:[{&quot;stableId&quot;:&quot;d88019ffc9237ea8a83f4286eca8121b&quot;,&quot;quantity&quot;:1,&quot;totalAmountBeforeReductions&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;totalAmountAfterDiscounts&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;totalAmountAfterLineDiscounts&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;checkoutPriceAfterDiscounts&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;checkoutPriceAfterLineDiscounts&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;checkoutPriceBeforeReductions&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;unitPrice&quot;:null,&quot;allocations&quot;:[],&quot;__typename&quot;:&quot;LineAllocation&quot;}],&quot;lineComponentsSource&quot;:null,&quot;lineComponents&quot;:[],&quot;legacyFee&quot;:false,&quot;__typename&quot;:&quot;MerchandiseLine&quot;}],&quot;__typename&quot;:&quot;FilledMerchandiseTerms&quot;},&quot;runningTotal&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;total&quot;:{&quot;__typename&quot;:&quot;AnyConstraint&quot;},&quot;checkoutTotalBeforeTaxesAndShipping&quot;:null,&quot;checkoutTotalTaxes&quot;:null,&quot;checkoutTotal&quot;:{&quot;__typename&quot;:&quot;AnyConstraint&quot;},&quot;deferredTotal&quot;:null,&quot;hasOnlyDeferredShipping&quot;:false,&quot;subtotalBeforeTaxesAndShipping&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;legacySubtotalBeforeTaxesShippingAndFees&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;legacyAggregatedMerchandiseTermsAsFees&quot;:[],&quot;attribution&quot;:{&quot;attributions&quot;:[],&quot;__typename&quot;:&quot;Attribution&quot;},&quot;saleAttributions&quot;:{&quot;attributions&quot;:[],&quot;__typename&quot;:&quot;SaleAttributions&quot;},&quot;__typename&quot;:&quot;Proposal&quot;},&quot;sellerProposal&quot;:{&quot;merchandiseDiscount&quot;:{&quot;__typename&quot;:&quot;FilledDiscountTerms&quot;,&quot;acceptUnexpectedDiscounts&quot;:true,&quot;lines&quot;:[]},&quot;deliveryDiscount&quot;:{&quot;__typename&quot;:&quot;FilledDiscountTerms&quot;,&quot;acceptUnexpectedDiscounts&quot;:true,&quot;lines&quot;:[]},&quot;deliveryExpectations&quot;:{&quot;__typename&quot;:&quot;UnavailableTerms&quot;},&quot;availableRedeemables&quot;:{&quot;availableRedeemables&quot;:[],&quot;__typename&quot;:&quot;AvailableRedeemables&quot;},&quot;availableDeliveryAddresses&quot;:[],&quot;mustSelectProvidedAddress&quot;:false,&quot;delivery&quot;:{&quot;intermediateRates&quot;:false,&quot;progressiveRatesEstimatedTimeUntilCompletion&quot;:0,&quot;shippingRatesStatusToken&quot;:&quot;&quot;,&quot;deliveryLines&quot;:[{&quot;id&quot;:&quot;gid://shopify/DeliveryLine/269ea2856c41d63937d1ba5212c29713&quot;,&quot;availableOn&quot;:null,&quot;destinationAddress&quot;:null,&quot;targetMerchandise&quot;:{&quot;linesV2&quot;:[{&quot;stableId&quot;:&quot;f252606d-cf60-4460-a2cc-ba5b1bb8ced7&quot;,&quot;quantity&quot;:{&quot;items&quot;:{&quot;value&quot;:1,&quot;__typename&quot;:&quot;IntValueConstraint&quot;},&quot;__typename&quot;:&quot;ProposalMerchandiseQuantityByItem&quot;},&quot;merchandise&quot;:{&quot;__typename&quot;:&quot;ContextualizedProductVariantMerchandise&quot;,&quot;requiresShipping&quot;:false,&quot;sellingPlan&quot;:{&quot;id&quot;:&quot;gid://shopify/SellingPlan/689493934369&quot;,&quot;digest&quot;:&quot;ed8a33b454120892ea31d0386a886850&quot;,&quot;name&quot;:&quot;Every Month&quot;,&quot;prepaid&quot;:false,&quot;deliveriesPerBillingCycle&quot;:1,&quot;subscriptionDetails&quot;:{&quot;billingInterval&quot;:&quot;MONTH&quot;,&quot;billingIntervalCount&quot;:1,&quot;billingMaxCycles&quot;:999999,&quot;deliveryInterval&quot;:&quot;MONTH&quot;,&quot;deliveryIntervalCount&quot;:1,&quot;__typename&quot;:&quot;SellingPlanSubscriptionDetails&quot;},&quot;__typename&quot;:&quot;SellingPlan&quot;}},&quot;totalAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;__typename&quot;:&quot;MerchandiseLine&quot;}],&quot;__typename&quot;:&quot;FilledMerchandiseLineTargetCollection&quot;},&quot;groupType&quot;:&quot;ONE_TIME_PURCHASE&quot;,&quot;selectedDeliveryStrategy&quot;:{&quot;handle&quot;:&quot;dac4d12a724e7c5b2138409e52b85422-14c3f0379ac5784b729e85e1299a7d14&quot;,&quot;__typename&quot;:&quot;CompleteDeliveryStrategy&quot;},&quot;deliveryMethodTypes&quot;:[&quot;NONE&quot;],&quot;availableDeliveryStrategies&quot;:[{&quot;originLocation&quot;:{&quot;id&quot;:&quot;gid://shopify/Location/78903935265&quot;,&quot;__typename&quot;:&quot;Location&quot;},&quot;title&quot;:&quot;Shipping&quot;,&quot;handle&quot;:&quot;dac4d12a724e7c5b2138409e52b85422-14c3f0379ac5784b729e85e1299a7d14&quot;,&quot;custom&quot;:false,&quot;description&quot;:&quot;&quot;,&quot;code&quot;:&quot;Shipping&quot;,&quot;acceptsInstructions&quot;:false,&quot;phoneRequired&quot;:false,&quot;methodType&quot;:&quot;NONE&quot;,&quot;carrierName&quot;:&quot;&quot;,&quot;incoterms&quot;:null,&quot;metafields&quot;:[],&quot;brandedPromise&quot;:null,&quot;deliveryStrategyBreakdown&quot;:null,&quot;minDeliveryDateTime&quot;:null,&quot;maxDeliveryDateTime&quot;:null,&quot;deliveryPromiseProviderApiClientId&quot;:null,&quot;deliveryPromisePresentmentTitle&quot;:{&quot;short&quot;:&quot;&quot;,&quot;long&quot;:&quot;&quot;,&quot;__typename&quot;:&quot;DeliveryPromisePresentmentTitle&quot;},&quot;displayCheckoutRedesign&quot;:false,&quot;estimatedTimeInTransit&quot;:{&quot;__typename&quot;:&quot;AnyConstraint&quot;},&quot;amount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;amountAfterDiscounts&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;pickupLocation&quot;:null,&quot;__typename&quot;:&quot;CompleteDeliveryStrategy&quot;}],&quot;__typename&quot;:&quot;DeliveryLine&quot;},{&quot;id&quot;:&quot;gid://shopify/DeliveryLine/b48b13e73a6ac2a86dc54425dd24d9ff&quot;,&quot;availableOn&quot;:null,&quot;destinationAddress&quot;:null,&quot;targetMerchandise&quot;:{&quot;linesV2&quot;:[{&quot;stableId&quot;:&quot;f252606d-cf60-4460-a2cc-ba5b1bb8ced7&quot;,&quot;quantity&quot;:{&quot;items&quot;:{&quot;value&quot;:1,&quot;__typename&quot;:&quot;IntValueConstraint&quot;},&quot;__typename&quot;:&quot;ProposalMerchandiseQuantityByItem&quot;},&quot;merchandise&quot;:{&quot;__typename&quot;:&quot;ContextualizedProductVariantMerchandise&quot;,&quot;requiresShipping&quot;:false,&quot;sellingPlan&quot;:{&quot;id&quot;:&quot;gid://shopify/SellingPlan/689493934369&quot;,&quot;digest&quot;:&quot;ed8a33b454120892ea31d0386a886850&quot;,&quot;name&quot;:&quot;Every Month&quot;,&quot;prepaid&quot;:false,&quot;deliveriesPerBillingCycle&quot;:1,&quot;subscriptionDetails&quot;:{&quot;billingInterval&quot;:&quot;MONTH&quot;,&quot;billingIntervalCount&quot;:1,&quot;billingMaxCycles&quot;:999999,&quot;deliveryInterval&quot;:&quot;MONTH&quot;,&quot;deliveryIntervalCount&quot;:1,&quot;__typename&quot;:&quot;SellingPlanSubscriptionDetails&quot;},&quot;__typename&quot;:&quot;SellingPlan&quot;}},&quot;totalAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;__typename&quot;:&quot;MerchandiseLine&quot;}],&quot;__typename&quot;:&quot;FilledMerchandiseLineTargetCollection&quot;},&quot;groupType&quot;:&quot;SUBSCRIPTION&quot;,&quot;selectedDeliveryStrategy&quot;:{&quot;handle&quot;:&quot;dac4d12a724e7c5b2138409e52b85422-d90e7c6afd9abfaa9e3a3a4410545c7d&quot;,&quot;__typename&quot;:&quot;CompleteDeliveryStrategy&quot;},&quot;deliveryMethodTypes&quot;:[&quot;NONE&quot;],&quot;availableDeliveryStrategies&quot;:[{&quot;originLocation&quot;:{&quot;id&quot;:&quot;gid://shopify/Location/78903935265&quot;,&quot;__typename&quot;:&quot;Location&quot;},&quot;title&quot;:&quot;Shipping&quot;,&quot;handle&quot;:&quot;dac4d12a724e7c5b2138409e52b85422-d90e7c6afd9abfaa9e3a3a4410545c7d&quot;,&quot;custom&quot;:false,&quot;description&quot;:&quot;&quot;,&quot;code&quot;:&quot;Shipping&quot;,&quot;acceptsInstructions&quot;:false,&quot;phoneRequired&quot;:false,&quot;methodType&quot;:&quot;NONE&quot;,&quot;carrierName&quot;:&quot;&quot;,&quot;incoterms&quot;:null,&quot;metafields&quot;:[],&quot;brandedPromise&quot;:null,&quot;deliveryStrategyBreakdown&quot;:[{&quot;amount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;discountRecurringCycleLimit&quot;:null,&quot;excludeFromDeliveryOptionPrice&quot;:true,&quot;targetMerchandise&quot;:{&quot;linesV2&quot;:[{&quot;stableId&quot;:&quot;f252606d-cf60-4460-a2cc-ba5b1bb8ced7&quot;,&quot;quantity&quot;:{&quot;items&quot;:{&quot;value&quot;:1,&quot;__typename&quot;:&quot;IntValueConstraint&quot;},&quot;__typename&quot;:&quot;ProposalMerchandiseQuantityByItem&quot;},&quot;merchandise&quot;:{&quot;__typename&quot;:&quot;ContextualizedProductVariantMerchandise&quot;,&quot;requiresShipping&quot;:false,&quot;sellingPlan&quot;:{&quot;id&quot;:&quot;gid://shopify/SellingPlan/689493934369&quot;,&quot;digest&quot;:&quot;ed8a33b454120892ea31d0386a886850&quot;,&quot;name&quot;:&quot;Every Month&quot;,&quot;prepaid&quot;:false,&quot;deliveriesPerBillingCycle&quot;:1,&quot;subscriptionDetails&quot;:{&quot;billingInterval&quot;:&quot;MONTH&quot;,&quot;billingIntervalCount&quot;:1,&quot;billingMaxCycles&quot;:999999,&quot;deliveryInterval&quot;:&quot;MONTH&quot;,&quot;deliveryIntervalCount&quot;:1,&quot;__typename&quot;:&quot;SellingPlanSubscriptionDetails&quot;},&quot;__typename&quot;:&quot;SellingPlan&quot;}},&quot;totalAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;__typename&quot;:&quot;MerchandiseLine&quot;}],&quot;__typename&quot;:&quot;FilledMerchandiseLineTargetCollection&quot;},&quot;__typename&quot;:&quot;DeliveryStrategyBreakdown&quot;}],&quot;minDeliveryDateTime&quot;:null,&quot;maxDeliveryDateTime&quot;:null,&quot;deliveryPromiseProviderApiClientId&quot;:null,&quot;deliveryPromisePresentmentTitle&quot;:{&quot;short&quot;:&quot;&quot;,&quot;long&quot;:&quot;&quot;,&quot;__typename&quot;:&quot;DeliveryPromisePresentmentTitle&quot;},&quot;displayCheckoutRedesign&quot;:false,&quot;estimatedTimeInTransit&quot;:{&quot;__typename&quot;:&quot;AnyConstraint&quot;},&quot;amount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;amountAfterDiscounts&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;pickupLocation&quot;:null,&quot;__typename&quot;:&quot;CompleteDeliveryStrategy&quot;}],&quot;__typename&quot;:&quot;DeliveryLine&quot;}],&quot;deliveryMacros&quot;:[],&quot;simpleDeliveryLine&quot;:{&quot;availableDeliveryStrategies&quot;:[{&quot;title&quot;:&quot;Shipping&quot;,&quot;amountAfterDiscounts&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;deliveryPromisePresentmentTitle&quot;:{&quot;short&quot;:&quot;&quot;,&quot;long&quot;:&quot;&quot;,&quot;__typename&quot;:&quot;DeliveryPromisePresentmentTitle&quot;},&quot;__typename&quot;:&quot;SimpleDeliveryStrategy&quot;}],&quot;__typename&quot;:&quot;SimpleDeliveryLine&quot;},&quot;__typename&quot;:&quot;FilledDeliveryTerms&quot;},&quot;payment&quot;:{&quot;availablePaymentLines&quot;:[{&quot;placements&quot;:[&quot;PAYMENT_METHOD&quot;],&quot;paymentMethod&quot;:{&quot;paymentMethodIdentifier&quot;:&quot;727be75050a4b387910da7cef5eababb&quot;,&quot;name&quot;:&quot;stripe&quot;,&quot;brands&quot;:[&quot;VISA&quot;,&quot;MASTERCARD&quot;,&quot;AMEX&quot;],&quot;paymentBrands&quot;:[&quot;VISA&quot;,&quot;MASTERCARD&quot;,&quot;AMEX&quot;],&quot;orderingIndex&quot;:1,&quot;displayName&quot;:null,&quot;extensibilityDisplayName&quot;:&quot;Stripe&quot;,&quot;availablePresentmentCurrencies&quot;:[&quot;MYR&quot;],&quot;paymentMethodUiExtension&quot;:null,&quot;checkoutHostedFields&quot;:null,&quot;alternative&quot;:false,&quot;__typename&quot;:&quot;PaymentProvider&quot;},&quot;__typename&quot;:&quot;AvailablePaymentLine&quot;}],&quot;paymentLines&quot;:[],&quot;billingAddress&quot;:null,&quot;paymentFlexibilityPaymentTermsTemplate&quot;:null,&quot;__typename&quot;:&quot;FilledPaymentTerms&quot;},&quot;poNumber&quot;:null,&quot;merchandise&quot;:{&quot;taxesIncluded&quot;:false,&quot;merchandiseLines&quot;:[{&quot;stableId&quot;:&quot;f252606d-cf60-4460-a2cc-ba5b1bb8ced7&quot;,&quot;merchandise&quot;:{&quot;__typename&quot;:&quot;ContextualizedProductVariantMerchandise&quot;,&quot;id&quot;:&quot;gid://shopify/ProductVariantMerchandise/48289337540897&quot;,&quot;digest&quot;:&quot;c814e9e766e4eda4637cf3f65d5c0f12&quot;,&quot;variantId&quot;:&quot;gid://shopify/ProductVariant/48289337540897&quot;,&quot;title&quot;:&quot;Automated Quran Sponsorship Sadaqa Jaariyah&quot;,&quot;untranslatedTitle&quot;:&quot;Automated Quran Sponsorship Sadaqa Jaariyah&quot;,&quot;subtitle&quot;:&quot;1 Quran&quot;,&quot;untranslatedSubtitle&quot;:&quot;1 Quran&quot;,&quot;sku&quot;:&quot;SKU-AutoQur-01&quot;,&quot;price&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;product&quot;:{&quot;id&quot;:&quot;gid://shopify/Product/8938148102433&quot;,&quot;vendor&quot;:&quot;Quraany Global&quot;,&quot;productType&quot;:&quot;Quran&quot;,&quot;__typename&quot;:&quot;Product&quot;},&quot;productUrl&quot;:&quot;/products/sadaqajaariyah&quot;,&quot;image&quot;:{&quot;altText&quot;:null,&quot;one&quot;:&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/subscription_64x64.jpg?v=1706079287&quot;,&quot;two&quot;:&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/subscription_128x128.jpg?v=1706079287&quot;,&quot;four&quot;:&quot;https://cdn.shopify.com/s/files/1/0727/0747/3697/files/subscription_256x256.jpg?v=1706079287&quot;,&quot;__typename&quot;:&quot;Image&quot;},&quot;properties&quot;:[{&quot;name&quot;:&quot;__appstle-selected-selling-plan&quot;,&quot;value&quot;:{&quot;string&quot;:&quot;689493934369&quot;,&quot;__typename&quot;:&quot;MerchandisePropertyValueString&quot;},&quot;visible&quot;:false,&quot;__typename&quot;:&quot;MerchandiseProperty&quot;}],&quot;requiresShipping&quot;:false,&quot;options&quot;:[{&quot;name&quot;:&quot;Qurans&quot;,&quot;value&quot;:&quot;1 Quran&quot;,&quot;__typename&quot;:&quot;ProductVariantOption&quot;}],&quot;sellingPlan&quot;:{&quot;name&quot;:&quot;Every Month&quot;,&quot;id&quot;:&quot;gid://shopify/SellingPlan/689493934369&quot;,&quot;digest&quot;:&quot;ed8a33b454120892ea31d0386a886850&quot;,&quot;deliveriesPerBillingCycle&quot;:1,&quot;prepaid&quot;:false,&quot;subscriptionDetails&quot;:{&quot;billingInterval&quot;:&quot;MONTH&quot;,&quot;billingIntervalCount&quot;:1,&quot;billingMaxCycles&quot;:999999,&quot;deliveryInterval&quot;:&quot;MONTH&quot;,&quot;deliveryIntervalCount&quot;:1,&quot;__typename&quot;:&quot;SellingPlanSubscriptionDetails&quot;},&quot;__typename&quot;:&quot;SellingPlan&quot;},&quot;giftCard&quot;:false,&quot;deferredAmount&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;}},&quot;quantity&quot;:{&quot;items&quot;:{&quot;value&quot;:1,&quot;__typename&quot;:&quot;IntValueConstraint&quot;},&quot;__typename&quot;:&quot;ProposalMerchandiseQuantityByItem&quot;},&quot;totalAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;recurringTotal&quot;:{&quot;title&quot;:&quot;Automated Quran Sponsorship Sadaqa Jaariyah - 1 Quran&quot;,&quot;interval&quot;:&quot;MONTH&quot;,&quot;intervalCount&quot;:1,&quot;recurringPrice&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;fixedPrice&quot;:null,&quot;fixedPriceCount&quot;:null,&quot;__typename&quot;:&quot;SubscriptionRecurringTotal&quot;},&quot;lineAllocations&quot;:[{&quot;stableId&quot;:&quot;d88019ffc9237ea8a83f4286eca8121b&quot;,&quot;quantity&quot;:1,&quot;totalAmountBeforeReductions&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;totalAmountAfterDiscounts&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;totalAmountAfterLineDiscounts&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;checkoutPriceAfterDiscounts&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;checkoutPriceAfterLineDiscounts&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;checkoutPriceBeforeReductions&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;unitPrice&quot;:null,&quot;allocations&quot;:[{&quot;__typename&quot;:&quot;LineComponentTaxAllocation&quot;}],&quot;__typename&quot;:&quot;LineAllocation&quot;}],&quot;lineComponentsSource&quot;:null,&quot;lineComponents&quot;:[],&quot;legacyFee&quot;:false,&quot;__typename&quot;:&quot;MerchandiseLine&quot;}],&quot;__typename&quot;:&quot;FilledMerchandiseTerms&quot;},&quot;note&quot;:{&quot;customAttributes&quot;:[],&quot;message&quot;:&quot;&quot;,&quot;__typename&quot;:&quot;Note&quot;},&quot;scriptFingerprint&quot;:{&quot;signature&quot;:null,&quot;signatureUuid&quot;:null,&quot;lineItemScriptChanges&quot;:[],&quot;paymentScriptChanges&quot;:[],&quot;shippingScriptChanges&quot;:[],&quot;__typename&quot;:&quot;ScriptFingerprint&quot;},&quot;transformerFingerprintV2&quot;:null,&quot;buyerIdentity&quot;:{&quot;customer&quot;:{&quot;presentmentCurrency&quot;:&quot;MYR&quot;,&quot;countryCode&quot;:&quot;MY&quot;,&quot;market&quot;:{&quot;id&quot;:&quot;gid://shopify/Market/48536256801&quot;,&quot;handle&quot;:&quot;my&quot;,&quot;__typename&quot;:&quot;Market&quot;},&quot;shippingAddresses&quot;:[],&quot;__typename&quot;:&quot;GuestProfile&quot;},&quot;purchasingCompany&quot;:null,&quot;contactInfoV2&quot;:null,&quot;marketingConsent&quot;:[],&quot;shopPayOptInPhone&quot;:null,&quot;__typename&quot;:&quot;FilledBuyerIdentityTerms&quot;},&quot;checkoutCompletionTarget&quot;:&quot;ORDER&quot;,&quot;recurringTotals&quot;:[{&quot;title&quot;:&quot;Automated Quran Sponsorship Sadaqa Jaariyah - 1 Quran&quot;,&quot;interval&quot;:&quot;MONTH&quot;,&quot;intervalCount&quot;:1,&quot;recurringPrice&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;fixedPrice&quot;:null,&quot;fixedPriceCount&quot;:null,&quot;__typename&quot;:&quot;SubscriptionRecurringTotal&quot;}],&quot;subtotalBeforeTaxesAndShipping&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;legacySubtotalBeforeTaxesShippingAndFees&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;legacyAggregatedMerchandiseTermsAsFees&quot;:[],&quot;legacyRepresentProductsAsFees&quot;:false,&quot;totalSavings&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;runningTotal&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;total&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;checkoutTotalBeforeTaxesAndShipping&quot;:null,&quot;checkoutTotalTaxes&quot;:null,&quot;checkoutTotal&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;deferredTotal&quot;:null,&quot;hasOnlyDeferredShipping&quot;:false,&quot;subtotalBeforeReductions&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;15.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;duty&quot;:{&quot;totalDutyAmount&quot;:null,&quot;totalTaxAndDutyAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;totalAdditionalFeesAmount&quot;:null,&quot;__typename&quot;:&quot;FilledDutyTerms&quot;},&quot;tax&quot;:{&quot;totalTaxAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;totalTaxAndDutyAmount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;},&quot;totalAmountIncludedInTarget&quot;:null,&quot;exemptions&quot;:[],&quot;__typename&quot;:&quot;FilledTaxTerms&quot;},&quot;tip&quot;:{&quot;tipSuggestions&quot;:[{&quot;__typename&quot;:&quot;TipSuggestion&quot;,&quot;percentage&quot;:0.02,&quot;amount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.3&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;}},{&quot;__typename&quot;:&quot;TipSuggestion&quot;,&quot;percentage&quot;:0.05,&quot;amount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.75&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;}},{&quot;__typename&quot;:&quot;TipSuggestion&quot;,&quot;percentage&quot;:0.07,&quot;amount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;1.05&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;}},{&quot;__typename&quot;:&quot;TipSuggestion&quot;,&quot;percentage&quot;:0,&quot;amount&quot;:{&quot;value&quot;:{&quot;amount&quot;:&quot;0.0&quot;,&quot;currencyCode&quot;:&quot;MYR&quot;,&quot;__typename&quot;:&quot;Money&quot;},&quot;__typename&quot;:&quot;MoneyValueConstraint&quot;}}],&quot;terms&quot;:{&quot;tipLines&quot;:[],&quot;__typename&quot;:&quot;FilledTipTerms&quot;},&quot;__typename&quot;:&quot;TipWrapper&quot;},&quot;localizationExtension&quot;:{&quot;fields&quot;:[],&quot;__typename&quot;:&quot;LocalizationExtension&quot;},&quot;landedCostDetails&quot;:{&quot;incotermInformation&quot;:null,&quot;__typename&quot;:&quot;LandedCostDetails&quot;},&quot;dutiesIncluded&quot;:false,&quot;nonNegotiableTerms&quot;:null,&quot;optionalDuties&quot;:{&quot;buyerRefusesDuties&quot;:false,&quot;refuseDutiesPermitted&quot;:false,&quot;__typename&quot;:&quot;OptionalDuties&quot;},&quot;attribution&quot;:{&quot;attributions&quot;:[],&quot;__typename&quot;:&quot;Attribution&quot;},&quot;saleAttributions&quot;:{&quot;attributions&quot;:[],&quot;__typename&quot;:&quot;SaleAttributions&quot;},&quot;managedByMarketsPro&quot;:false,&quot;captcha&quot;:null,&quot;cartCheckoutValidation&quot;:null,&quot;alternativePaymentCurrency&quot;:null,&quot;isShippingRequired&quot;:false,&quot;__typename&quot;:&quot;Proposal&quot;},&quot;__typename&quot;:&quot;NegotiationResultAvailable&quot;},&quot;errors&quot;:[{&quot;code&quot;:&quot;BUYER_IDENTITY_MISSING_CONTACT_METHOD&quot;,&quot;localizedMessage&quot;:&quot;Missing a valid contact method.&quot;,&quot;nonLocalizedMessage&quot;:&quot;Missing a valid contact method.&quot;,&quot;localizedMessageHtml&quot;:&quot;Missing a valid contact method.&quot;,&quot;target&quot;:&quot;$.buyerIdentity&quot;,&quot;__typename&quot;:&quot;UnprocessableTermViolation&quot;},{&quot;code&quot;:&quot;BUYER_IDENTITY_EMAIL_REQUIRED&quot;,&quot;localizedMessage&quot;:&quot;An email is required when the merchandise is purchased using a subscription.&quot;,&quot;nonLocalizedMessage&quot;:&quot;An email is required when the merchandise is purchased using a selling plan.&quot;,&quot;localizedMessageHtml&quot;:&quot;An email is required when the merchandise is purchased using a subscription.&quot;,&quot;target&quot;:&quot;$.buyerIdentity&quot;,&quot;__typename&quot;:&quot;UnprocessableTermViolation&quot;},{&quot;code&quot;:&quot;DELIVERY_WRONG_NUMBER_OF_DELIVERY_LINES&quot;,&quot;localizedMessage&quot;:&quot;A delivery line must be specified for each group of merchandise.&quot;,&quot;nonLocalizedMessage&quot;:&quot;A delivery line must be specified for each group of merchandise&quot;,&quot;localizedMessageHtml&quot;:&quot;A delivery line must be specified for each group of merchandise.&quot;,&quot;target&quot;:&quot;$.delivery.deliveryLines&quot;,&quot;__typename&quot;:&quot;UnprocessableTermViolation&quot;},{&quot;code&quot;:&quot;TAX_NEW_TAX_MUST_BE_ACCEPTED&quot;,&quot;localizedMessage&quot;:&quot;A new tax line in the seller proposal must be accepted in order to continue.&quot;,&quot;nonLocalizedMessage&quot;:&quot;A new tax line in the seller proposal must be accepted in order to continue.&quot;,&quot;localizedMessageHtml&quot;:&quot;A new tax line in the seller proposal must be accepted in order to continue.&quot;,&quot;target&quot;:&quot;$&quot;,&quot;__typename&quot;:&quot;AcceptNewTermViolation&quot;},{&quot;code&quot;:&quot;PAYMENTS_UNACCEPTABLE_PAYMENT_AMOUNT&quot;,&quot;localizedMessage&quot;:&quot;Your order total has changed. Review and try again.&quot;,&quot;nonLocalizedMessage&quot;:&quot;The sum of proposed payments cannot cover the total amount to be paid.&quot;,&quot;localizedMessageHtml&quot;:&quot;Your order total has changed. Review and try again.&quot;,&quot;target&quot;:&quot;$.payment&quot;,&quot;__typename&quot;:&quot;UnprocessableTermViolation&quot;},{&quot;code&quot;:&quot;PAYMENTS_METHOD_REQUIRED&quot;,&quot;localizedMessage&quot;:&quot;A payment method must be proposed.&quot;,&quot;nonLocalizedMessage&quot;:&quot;A payment method must be proposed&quot;,&quot;localizedMessageHtml&quot;:&quot;A payment method must be proposed.&quot;,&quot;target&quot;:&quot;$.payment&quot;,&quot;__typename&quot;:&quot;UnresolvableTermViolation&quot;}],&quot;__typename&quot;:&quot;NegotiationResultPayload&quot;},&quot;__typename&quot;:&quot;Session&quot;}}}"/><meta name="serialized-graphql-endpoint" content="&quot;https://www.quraany.net/checkouts/unstable/graphql&quot;"/><meta name="serialized-shop-pay-config" content="{&quot;authorization&quot;:null,&quot;pre_select_installments&quot;:false,&quot;redirect_source&quot;:null,&quot;callback_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaWQ6XC9cL3Nob3BpZnlcL1Nob3BcLzcyNzA3NDczNjk3IiwibmJmIjoxNzIyMzI4NTA0LCJzZXNzaW9uX3Rva2VuIjoiWldWUVRGWTJaVWhwV2psbk1IaG9RbFpYZVhaeldWRlFZMFV5UW10dmEwRTJjM05YV205bGFHZG5XbU5qUXk4elIxZGFhR3Q2VWtvMVMzVm5MM1YzYTNVNFNYaDVjelppTlVwMmJGQm9lV05rUWxCcWVUUkZiVVp5TVZCd2NGQkdhbWRGZG5SR1RVeEJSVXQyTjBoa1JTdGxjMkpKZDJKcU5qZGtSVkZQWTJsRFFYWXhWWE5CVUZFNFJERm1ZMGRJUm5ZeE9FUlRkbkZoVlZsM1UwWnlWMXAxVDJzMVdGWnViRWhXYzB3M1VGZDRXRTg1UWtwRWIyNU9XR0ZCUTIxd1VIcFJkVlEwVDAxNVpqWktSM1l6T0ZoTFZHNHlNWE5uWm1GRVZVbGlWelF6UVZKbE1tSllURFZvWjAxMWJqWnhUV2hVYzBOR1NXMWlRMVIzVFhWcVoxbDFUbWhoV0RjelZEWkZkSEZXTlVkWVVYZEpaelZhY1RnNFUzSnhRVXMxY2pGWllqSndNMVYyVVQwOUxTMDFhWFJQVEdsQlJFaGhZbTVVVjAxRUxTMVNhR2MwTDB0cmVucDFOalpuU1dSbVVETlNVa1ZuUFQwIiwic2Vzc2lvbl9jdXN0b21lcl9pZCI6bnVsbCwibG9naW5fd2l0aF9zaG9wX2N1c3RvbWVyX2lkIjpudWxsLCJzaG9wX2FjY291bnRfdXVpZCI6bnVsbCwiaWRlbnRpdHlfY3VzdG9tZXJfaWQiOm51bGwsImN1c3RvbWVyX2F1dGhlbnRpY2F0aW9uX2F1dGhfcHJvdmlkZXIiOm51bGwsInN0b3JlZnJvbnRfZGlnZXN0IjpudWxsLCJleHAiOjE3MjIzNTAxMDQsImxhbmRpbmdfcGFnZSI6IlwvIn0.Wj9R9jwHYm9tOgDzTwcNx7YnWvQ5-SjjyzfwVNKxCwE&quot;,&quot;checkout_as_guest_url&quot;:&quot;https://www.quraany.net/checkouts/cn/Z2NwLWFzaWEtc291dGhlYXN0MTowMUozWFlYMEM4SDdEQ0tKOFZHUU1YQ001UQ?locale=en-MY&amp;skip_shop_pay=true&quot;,&quot;from_classic&quot;:false,&quot;iframe_token&quot;:&quot;OXJuck9WOWNobExaOFY3NHkwckRlYzUxdm1pZjlUeWlpaVZZUEJBT3hGVVVua0w2cC96L0c5L1BVUGZZc0d2ZS0tQktwaXQxWFl1Y2tJSklWZkpVejlmUT09--c04548db3697dc530a18d382443dc700fefe006f&quot;,&quot;redirect_url&quot;:&quot;blBFWGRyTzA3WnVxbGJvRVRxbHFPVkRYNk9KRGl1d1ZIbU52UmJ6NE01VnlJaXBEZEJaUit6eU9KNEVqeTk5VFBqamltclk0d2IxTmRMUTJTR2dNQStBcW9yMVpkSHZlcWd1OUluS2NsK1IybGRjbHlqeUhEZEJUWHFkc2pySy82WHNyV2JCR20zRFQrR3hKRUV4UnNFVVArN0Y3endENFZBSWozRUIvQlN5aCt3QjQ1cEF1T1pybVpiaUdIWWxUaDlkQ0hUQ1huaXhDR2g3UUhnU0pUWjJkdDB5bXhuVE0wZVdrd2JSbUhLQXB5Q0VYZXdDY0k5RCtJVTNPc0ViSittYzNPai9XbDdrL05KOU1md0pjd2t4VWw3SWg0ZU5jSGxna3FrUUhGSzlzaG5adlpTUVdZOGttR0Y0MW96VlpJM1pralh0c041a09rbE12aXFNd2w0YU1zSVdhd0JuWmF2N3BYdXNoWXJMQzQrY0lxcW5od1ZLYjY2Z1FBRTkwRmlPWWRYUk05UXRUZWRPcXF0L2JMTE15aDIrbEkyWmEvYkVMeUhmdmM4L1hTTUQwck5XUHJIQjBpVFBHWDJpaWhoZHlISmpuckJ1ZXVFNFh6N0U3bllhNG01cnVPRUJ1dllnb3NXYnQyMEZ6emFmV1ZvNDVaNHVUNzJiQmljaWZFcHo5QStYQXJjUXZBay83eWljWm5LS29oK1hsSnZyTnVuaWIyOC9xRGo4Mk1rYUNKRElKSWcyaFBKMjdFOU9NZGQweHZQaVZyU1dqSC9CeElqcnFUa09zWFFsa0VlbzVWa2RLcjRja0Q5cytUQjdWYzFIVE1hQ0x2bnc5M2hPR3FaTXpzL1Zub0Z0NkEydTlMTjhxN0k4TC9OZSt1bzBpb2hBbG5WNjlCRDNTRnVlbUlwNDlHU01qYmt3SUI3Y0tkMExLc2owdDdWMk1MMU9VcldpdXRUK2IxMDBDMUJVNlJ6TWNmTkxGRVNLcTNITGpVKzNKdUY1c0h6M1JndmtZdWNnUm1Wdm5Edm8vYytNdmdaZWdUdGNDRDZQRDRzMjBCTUZPQ0QzMnpjNU84REluRE9JcEw1SHVmNUpoTVZsV1hHZTI3eUdpQ095T0ppYlpEUUlQTElPVUFSNGJobDZ6WFdzZnFTOHdpb2JpWDhZditwR1Z1MkxCSXlMMG5DR0hhZkd2TVJHOUJzejhBUVdxYnhkczR0VGNrL0krQmZ2M3JUMks1RFkweStTcVZwa0J3Ymo5eEhvV0JaVzRSMWhlVHRyMG91NGkxMWNnYU1NWm9TWGYwS0Jzc01PRWpkVDhkTTVHUEtVUXlpWTdzeXN2bTJvNHF1Z0JSNmFxYXMxMUlQY2g1aFcxN2NKTVYyMG5weDU2SVIrNXJMT2l3NWJZSTNhcU9IZkpZZ0ZnVGlZekdxaVNJR1dKK1U2NjBSS3FIOG5zdU1iNVJqeXhGZ2dJUVpHY3J1UXFEMHRxSC95Y1NyR0hpZkxyZ0RQZkFhdk1WR0VwNDY4bDFNZ3UrMURNbzlnZ0oxNUJpN2pPYndUWEZpYWxhaHA1YVlBNW9xMkFQeFhmcFdTTGJ2RFlEbVVPNUduT1BzZ1lzWUx2SUxDZGZpRGJuak9rMDd2ZkJ4U3BMTjhTbTV3c1pacWY4SlNhSHNkS1VnbjV2a0w5cmdvaUd3czBYT0lUcTFXN2s3NDFkN0ZpOG8yVWw2R0Y0bVpERzgrZktuS01UUEhZN0tLdm1RMDZ6Mk4rcEFuMHdRRElLVkkvTVkwN21FS0x0L2oycEhHWVVqNWY4cVh3NEpmQmJGbWUxNkJtaElTbC9FUmxZNEtWM1FNNzhjVXlMbyswdDFiNGVwVXpuVDNCYTJ1c3NHNnI4cndsSFRRUENIYXFYMXZwRXk3OVlmRVFGd01hTGVRSGJyeS81S2hqOXJyZmRHL3BDbTlWT1pHOXNjRFBVK2wrdFZ5N1RQa1RPTy94WDV0Qk04eHhZV0F3OXBueDEwZ3JGRHJpVXdDSHpLb0hHbSsvajZINENoTy9KTlQzUUQ1OGV1bDZueGJ3VmdhcDRBN3hTYW5QalRBbUVwMUlDd1duVnpoMTc1QXFoNDVaQXc1czVyTlZDQkJPT2NkVXY5THlsTzlrUjV5Q0FkWXpnb1ZSRTJqblYzcWZWUUpQL3FLOEllRFZualpMd3RYd04xWHpsZVNCSXRFTG9DRkwwNnlsUnpGWHJMQnVGd3hYcWpRNElaVWtzRldvWGJHK2lzZXJhajNDSjZUckM3MG1PTkNrWnhUYzVJN2ttQW5zTnp1VzVVT1U4ZzZXUVg3a1VlZmozNjM2QWRKMjhNdjBZUWFnc0ZHQ0ZJL3pDdmsrTU9maGlaTUhtL1gxQVNLTS0taUx4bTFZc2kvYTc5T1lUWlBPbFkwdz09--13019a0af9b8e871577621928e5034d587dfffd7&quot;,&quot;tracking_unique&quot;:&quot;0220e0fa-daad-49ef-8206-c108331d9312&quot;,&quot;tracking_visit&quot;:&quot;726e670e-ef84-413a-bbc1-1fd7c9bd2eaa&quot;,&quot;transaction_params&quot;:&quot;encrypted_params=bGlxM0gxYnU3NEtZSjRQbkxKWFFJZUN3cm43SGRrQmNFTFNPOGloZWhWVnA1MFlWaWhtOGYwRlFFTVU3YlhLbDM3UTcrRXNPU21jZytpc1VmN2VIbkxvTVJjSDJEOWFaNXV5aEFTVDc3dElHeERzSmhzclRUQUxPVFA2cVgzWDItLWpmUCtZYjQ3akZoWHo4RlVveVVpUXc9PQ%3D%3D--483b580c50b0adf63209950c8ca4636cf73866dd&quot;,&quot;web_url&quot;:&quot;https://www.quraany.net/checkouts/cn/Z2NwLWFzaWEtc291dGhlYXN0MTowMUozWFlYMEM4SDdEQ0tKOFZHUU1YQ001UQ?locale=en-MY&amp;skip_shop_pay=true&quot;}"/><meta name="serialized-deploy-stage" content="&quot;canary&quot;"/><meta name="serialized-public-path" content="&quot;https://cdn.shopify.com/shopifycloud/checkout-web/assets/&quot;"/><meta name="serialized-receipt" content="{&quot;id&quot;:null,&quot;exists&quot;:false,&quot;inProgress&quot;:false,&quot;orderStatusPageUrl&quot;:null,&quot;shopPay&quot;:false,&quot;processingErrorFailure&quot;:null}"/><meta name="serialized-request-id" content="&quot;8ab4035ded72a48b&quot;"/><meta name="serialized-server-handling" content="&quot;fast&quot;"/><meta name="serialized-worker-version" content="&quot;fast&quot;"/><meta name="serialized-server-render" content="&quot;no&quot;"/><meta name="serialized-session-finished" content="false"/><meta name="serialized-api-client-id" content="580111"/><meta name="serialized-redesign-enabled" content="true"/><meta name="serialized-shop" content="{&quot;id&quot;:&quot;gid://shopify/Shop/72707473697&quot;,&quot;name&quot;:&quot;Quraany&quot;,&quot;domain&quot;:&quot;www.quraany.net&quot;,&quot;myshopifyDomain&quot;:&quot;quraany.myshopify.com&quot;,&quot;origins&quot;:[&quot;https://quraany.myshopify.com&quot;,&quot;https://quraany.account.myshopify.com&quot;,&quot;https://www.quraany.net&quot;,&quot;https://quraany.net&quot;]}"/><meta name="serialized-login-url" content="&quot;https://www.quraany.net/account/login?checkout_url=%2Fcheckouts%2Fcn%2FZ2NwLWFzaWEtc291dGhlYXN0MTowMUozWFlYMEM4SDdEQ0tKOFZHUU1YQ001UQ%3Fdiscount%3D%26locale%3Den-MY&quot;"/><meta name="serialized-logout-url" content="&quot;https://www.quraany.net/account/logout?return_url=%2Fcheckouts%2Fcn%2FZ2NwLWFzaWEtc291dGhlYXN0MTowMUozWFlYMEM4SDdEQ0tKOFZHUU1YQ001UQ%3Fdiscount%3D%26locale%3Den-MY&quot;"/><meta name="serialized-invoice-login-type" content="null"/><meta name="serialized-experiments" content="[{&quot;clientHandle&quot;:&quot;e_ff5921d1b9ff4a7305e985426ef03131&quot;,&quot;variant&quot;:null},{&quot;clientHandle&quot;:&quot;e_eccde098c1cf79b2d26753ae14a4e9e4&quot;,&quot;variant&quot;:null},{&quot;clientHandle&quot;:&quot;e_931c027b1ee83a024852b0a2739810e0&quot;,&quot;variant&quot;:null},{&quot;clientHandle&quot;:&quot;e_4af2d853d08a036deaca46b21397c3fd&quot;,&quot;variant&quot;:null}]"/><meta name="serialized-extensions-assets-path" content="&quot;https://extensions.shopifycdn.com/shopifycloud/checkout-web/assets/&quot;"/><div id="app"></div></body></html>
